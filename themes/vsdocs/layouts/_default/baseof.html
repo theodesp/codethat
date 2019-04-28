@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+    {{ .Hugo.Generator }}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+
+    {{ with .Description }}<meta name="description" content="{{. | markdownify }}">{{ end }}
+    {{ with .Keywords }}<meta name="keywords" content="{{.}}">{{ end }}
+
+    {{ partial "meta/name-author" . }}
+    {{ template "_internal/opengraph.html" . }}
+    {{ template "_internal/twitter_cards.html" . }}
+    {{ partial "meta/og" . }}
+
+    {{ partial "favicon" . }}
+
+    <!-- Include StyleSheets -->
+    <link href="{{ "/css/style.css" | relURL }}" rel="stylesheet" type="text/css">
+
+    <!-- <link rel="stylesheet" href="css/custom.css"> -->
+    <script type="text/javascript" src="{{ "js/modernizr.js" | relURL }}">
+
+    {{ range .Site.Params.customCSS }} <link rel="stylesheet" href="{{ . | absURL }}" /> {{ end }}
+  </script>
+</head>
+
+<body class="">
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<div class="page js-page ">
+    {{ partial "header" . }}
+    {{ block "main" . }}{{ end }}
+    {{ partial "footer" . }}
+</div>
+
+{{ partial "scripts.html" }}
+
+</body>
+
+</html>

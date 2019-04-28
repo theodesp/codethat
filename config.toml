@@ -1,0 +1,34 @@
+baseURL = "http://localhost:1313/"
+languageCode = "en-us"
+defaultContentLanguage = "en"
+defaultContenLanguageInSubdir = "true"
+title = "Top Quality Developer Tutorials CodeThat.today"
+Paginate = 10
+pygmentsUseClasses = true
+theme= "vsdocs"
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+
+[[menu.main]]
+    name = "Go"
+    weight = -100
+    url = "/go/"
+[[menu.main]]
+    name = "Python"
+    weight = -100
+    url = "/python/"
+
+[Params]
+  RSSLink = "/index.xml"
+  author = "theodesp"
+  github = "theodesp"
+  twitter = "@nerdokto"
+  email = "thdespou@hotmail.com"
+  sharing = true
+  dateFormatToUse = "2006-01-02"
+  orgName = "CodeThat.today"
+  copyright = "Code snippets licensed under MIT, unless otherwise noted © 2019"
+
