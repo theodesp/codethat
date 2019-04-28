@@ -20,6 +20,22 @@ theme= "vsdocs"
     name = "Python"
     weight = -100
     url = "/python/"
+[[menu.main]]
+    name = "Typescript"
+    weight = -100
+    url = "/typescript/"
+[[menu.main]]
+    name = "Clojure"
+    weight = -100
+    url = "/clojure/"
+[[menu.main]]
+    name = "Scala"
+    weight = -100
+    url = "/scala/"
+[[menu.main]]
+    name = "Learning"
+    weight = -100
+    url = "/learning/"
 
 [Params]
   RSSLink = "/index.xml"
