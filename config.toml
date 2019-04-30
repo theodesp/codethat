@@ -32,10 +32,47 @@ theme= "vsdocs"
     name = "Scala"
     weight = -100
     url = "/scala/"
+
 [[menu.main]]
     name = "Learning"
     weight = -100
     url = "/learning/"
+
+[[menu.main]]
+    name = "more"
+    weight = -100
+    url = "/"
+
+[[menu.main]]
+    parent = "more"
+    name = "Software Engineering"
+    weight = -100
+    url = "/software-engineering/"
+
+[[menu.footer]]
+    name = "About"
+    weight = -100
+    url = "/about/"
+
+[[menu.footer]]
+    name = "Privacy Policy"
+    weight = -100
+    url = "/privacy/"
+
+[[menu.footer]]
+    name = "Write for us"
+    weight = -100
+    url = "/write/"
+
+[[menu.footer]]
+    name = "Contact"
+    weight = -100
+    url = "/contact/"
+
+[[menu.footer]]
+    name = "Support us"
+    weight = -100
+    url = "/support/"
 
 [Params]
   RSSLink = "/index.xml"

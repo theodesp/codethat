@@ -21,21 +21,9 @@
                             <a href="https://twitter.com/{{.Site.Params.twitter}}"><i class="fa fa-twitter"></i></a>
                         </div>
                         <ul class="footer-menu helper right">
-                            <li>
-                                <a href="#"> About us </a>
-                            </li>
-                            <li>
-                                <a href="#"> Privacy Policy </a>
-                            </li>
-                            <li>
-                                <a href="#"> Write For Us </a>
-                            </li>
-                            <li>
-                                <a href="#"> Contact </a>
-                            </li>
-                            <li>
-                                <a href="#"> Support us </a>
-                            </li>
+                            {{ range .Site.Menus.footer }}
+                            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                            {{end}}
                         </ul>
                         <p class="copyright helper right">
                             <a href="/">{{.Site.Params.orgName}}</a> {{.Site.Params.copyright}} </p>

@@ -1,0 +1,76 @@
+<div class="header header-over large">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <a href="/" class="logo-image logo-animated">
+                    <img src="img/logos/logo-light-.svg" alt="logo">
+                </a>
+            </div>
+            <div class="col-md-9 col-sm-6 col-xs-6">
+                <nav class="right helper">
+                    <ul class="menu sf-menu js-menu menu-light">
+                        {{ $currentPage := . }}
+                        {{ range .Site.Menus.main }}
+                        {{ if .HasChildren }}
+                            <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+                                <a href="#">
+                                    {{ .Pre }}
+                                    <span>{{ .Name }}</span>
+                                </a>
+                                <ul class="sub-menu">
+                                    {{ range .Children }}
+                                    <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                                    <a href="{{ .URL }}">{{ .Name }}</a>
+                                    </li>
+                                    {{ end }}
+                                </ul>
+                            </li>
+                        {{ else }}
+                        <li>
+                            <a href="{{ .URL }}">
+                                {{ .Pre }}
+                                <span>{{ .Name }}</span>
+                            </a>
+                        </li>
+                        {{ end }}
+                        {{ end }}
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="header-back header-back-video header-back-full-page js-video-background" data-video="video/timelapse">
+    <div class="header-back-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="rotator rotator-light ">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="rotator-text">
+                                        <span class="js-rotator">Top Level, Superior, No fuss, Quality, Supercalifragilisticexpialidocious</span> developer tutorials. </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-subscribe-form helper center">
+                        <form action="#">
+                            <input type="text" name="search" autocomplete="off" id="subscribe" class="subscribe-input" placeholder="Looking for...">
+                            <button class="subscribe-button">
+                                <i class="fa fa-search"></i>
+                                <span class="subscribe-text">search</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="next-section js-scroll-to next-section-light" data-target="#content">
+					<i class="fa-angle-down fa"></i>
+				</span>
+    </div>
+</div>
+<div id="content">
+</div>

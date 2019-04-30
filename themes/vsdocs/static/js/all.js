@@ -23188,7 +23188,7 @@ module.exports = exports['default'];
 		rotators.Morphext({
 			animation: "bounceIn",
 			separator: ",",
-			speed: 2000
+			speed: 3000
 		});
 	})();
 

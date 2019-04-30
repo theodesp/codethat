@@ -93,6 +93,10 @@
 /* ==========================================================================
    Colors configuration
    ========================================================================== */
+:root {
+  --main-color: #07889b;
+  --alternative-color: #f38230;
+}
 /* ==========================================================================
    Fonts configuration
    ========================================================================== */
@@ -7775,6 +7779,9 @@ Copyright (c) 2015 Daniel Eden
 .header-back-bg-subscribe {
   background-image: url(../img/backgrounds/12.jpg);
 }
+.header-back-bg-dark-dawn {
+  background-image: url(../img/backgrounds/dark-dawn.jpeg);
+}
 .header-back-buttons .button {
   margin-right: 20px;
   min-width: 180px;
@@ -10298,7 +10305,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .morphext > .animated {
   display: inline-block;
-  color: #2288cc;
+  color: var(--alternative-color);
   z-index: 4;
   position: relative;
 }
@@ -16731,7 +16738,7 @@ input.changelog-input {
   padding: 16px 30px 16px 18px;
   border-radius: 27px;
   font-weight: 300;
-  background-color: #28C;
+  background-color: var(--main-color);
   font-size: 1.125em;
   display: inline-block;
   zoom: 1;
@@ -16750,7 +16757,7 @@ input.changelog-input {
   outline: none;
 }
 .subscribe-button:hover {
-  background-color: #1e79b6;
+  background-color: #006F82;
 }
 .subscribe-button:active {
   top: 1px;
