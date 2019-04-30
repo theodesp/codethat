@@ -23567,9 +23567,14 @@ module.exports = exports['default'];
 	// Docs: https://github.com/VodkaBears/Vide
 	(function(){
 		if ($('.js-video-background').length) {
-			var video = $('.js-video-background');
-			var videoSrc = video.data('video');
-
+			let video = $('.js-video-background');
+			let videoSrcs = video.data('video').split(',');
+			let videoSrc;
+			if (videoSrcs.length == 1) {
+				videoSrc = `/video/${videoSrcs[0]}`
+			} else {
+				videoSrc = `/video/${videoSrcs[Math.floor(Math.random() * videoSrcs.length)]}`
+			}
 
 			video.vide(videoSrc, {
 				posterType: 'jpg',
