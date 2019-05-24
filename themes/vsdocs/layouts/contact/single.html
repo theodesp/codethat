@@ -1,0 +1,53 @@
+{{ define "title"}} {{ .Site.Title }} - {{ .Title}} {{end}}
+{{ define "header"}} {{ partial "article-header.html" . }} {{end}}
+{{ define "main" }}
+<div id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="contacts">
+                    <h3 class="contacts-title"> {{.Params.Message}} </h3>
+                    <div class="contacts-success js-contacts-success">
+                        <i class="pe-7s-check"></i>Your message was sent successfully.
+                        <br>Thank you!</div>
+                    <form action="php/contact.php" id="js-contact-form">
+                        {{ if .Params.Note }}
+                        <div class="note js-note blue">
+                            <h4 class="note-title">
+                                Note
+                            </h4>
+                            <p class="note-description"> {{.Params.Note }} </p>
+                        </div>
+                        {{ end }}
+                        <ul class="contacts-inputs">
+                            <li class="contacts-item">
+                                <label for="full-name" class="contacts-label">Your Name</label>
+                                <input type="text" name="full-name" id="full-name" class="contacts-input form-control" data-validation="required"> </li>
+                            <li class="contacts-item">
+                                <label for="email" class="contacts-label">Your Email</label>
+                                <input type="text" name="email" id="email" class="contacts-input form-control" data-validation="required email"> </li>
+                            <li class="contacts-item">
+                                <label for="country" class="contacts-label">Your Country</label>
+                                <input type="text" name="country" id="country" class="contacts-input form-control"> </li>
+                            <li class="contacts-item">
+                                <label for="message" class="contacts-label">Your Message</label>
+                                <textarea id="message" name="message" class="contacts-input form-control" data-validation="required"></textarea>
+                            </li>
+                        </ul>
+                        <button class="button blue full">Send!</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="contacts-info">
+                    <h4 class="contacts-info-title"> Say Hi </h4>
+                    <p class="contacts-info-description"> Let's drink a coffee together. </p>
+                    <div class="contacts-info-data">
+                        <a href="#"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

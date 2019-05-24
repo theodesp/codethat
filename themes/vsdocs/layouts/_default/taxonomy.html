@@ -1,0 +1,14 @@
+{{ define "title"}} {{ .Site.Title }} - {{ .Title}} {{end}}
+{{ define "header"}} {{ partial "article-header.html" . }} {{end}}
+{{ define "main" }}
+<main>
+    {{ $termName := .Data.Singular }}
+    {{ $terms := .Data.Terms.ByCount }}
+    {{ $type := .Type }}
+
+    {{$termName}}
+
+    {{$terms}}
+    {{$type}}
+</main>
+{{ end }}

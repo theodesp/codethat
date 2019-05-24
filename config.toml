@@ -15,28 +15,28 @@ theme= "vsdocs"
 [[menu.main]]
     name = "Go"
     weight = -100
-    url = "/go/"
+    url = "/categories/go/"
 [[menu.main]]
     name = "Python"
     weight = -100
-    url = "/python/"
+    url = "/categories/python/"
 [[menu.main]]
     name = "Typescript"
     weight = -100
-    url = "/typescript/"
+    url = "/categories/typescript/"
 [[menu.main]]
     name = "Clojure"
     weight = -100
-    url = "/clojure/"
+    url = "/categories/clojure/"
 [[menu.main]]
     name = "Scala"
     weight = -100
-    url = "/scala/"
+    url = "/categories/scala/"
 
 [[menu.main]]
     name = "Learning"
     weight = -100
-    url = "/learning/"
+    url = "/categories/learning/"
 
 [[menu.main]]
     name = "more"
@@ -47,12 +47,12 @@ theme= "vsdocs"
     parent = "more"
     name = "Software Engineering"
     weight = -100
-    url = "/software-engineering/"
+    url = "/categories/software-engineering/"
 
 [[menu.footer]]
     name = "About"
     weight = -100
-    url = "/about/"
+    url = "/about"
 
 [[menu.footer]]
     name = "Privacy Policy"

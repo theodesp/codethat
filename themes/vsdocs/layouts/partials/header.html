@@ -1,45 +1,4 @@
-<div class="header header-over large">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-6">
-                <a href="/" class="logo-image logo-animated">
-                    <img src="img/logos/logo-light-.svg" alt="logo">
-                </a>
-            </div>
-            <div class="col-md-9 col-sm-6 col-xs-6">
-                <nav class="right helper">
-                    <ul class="menu sf-menu js-menu menu-light">
-                        {{ $currentPage := . }}
-                        {{ range .Site.Menus.main }}
-                        {{ if .HasChildren }}
-                            <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
-                                <a href="#">
-                                    {{ .Pre }}
-                                    <span>{{ .Name }}</span>
-                                </a>
-                                <ul class="sub-menu">
-                                    {{ range .Children }}
-                                    <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-                                    <a href="{{ .URL }}">{{ .Name }}</a>
-                                    </li>
-                                    {{ end }}
-                                </ul>
-                            </li>
-                        {{ else }}
-                        <li>
-                            <a href="{{ .URL }}">
-                                {{ .Pre }}
-                                <span>{{ .Name }}</span>
-                            </a>
-                        </li>
-                        {{ end }}
-                        {{ end }}
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </div>
-</div>
+{{ partial "nav-header.html" . }}
 <div class="header-back header-back-video header-back-full-page js-video-background" data-video="{{ delimit (slice "1" "2" "3" "4") "," }}">
     <div class="header-back-container">
         <div class="container">
