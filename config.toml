@@ -18,29 +18,24 @@ theme= "vsdocs"
     url = "/categories/go/"
 [[menu.main]]
     name = "Python"
-    weight = -100
+    weight = -90
     url = "/categories/python/"
 [[menu.main]]
     name = "Typescript"
-    weight = -100
+    weight = -80
     url = "/categories/typescript/"
 [[menu.main]]
     name = "Clojure"
-    weight = -100
+    weight = -70
     url = "/categories/clojure/"
 [[menu.main]]
     name = "Scala"
-    weight = -100
+    weight = -60
     url = "/categories/scala/"
 
 [[menu.main]]
-    name = "Learning"
-    weight = -100
-    url = "/categories/learning/"
-
-[[menu.main]]
     name = "more"
-    weight = -100
+    weight = -50
     url = "/"
 
 [[menu.main]]
@@ -83,5 +78,6 @@ theme= "vsdocs"
   sharing = true
   dateFormatToUse = "2006-01-02"
   orgName = "CodeThat.today"
+  mainSections = ["tutorial", "article"]
   copyright = "Code snippets licensed under MIT, unless otherwise noted © 2019"
 

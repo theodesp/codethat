@@ -2,5 +2,45 @@
 {{ define "header"}} {{ partial "header" .}} {{end}}
 {{ define "main"}}
 
+<div id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="homepage-content">
+                    {{.Content}}
+                </div>
+                <div class="grid-view js-grid-view">
+                    <div class="row">
+                        {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+                        {{ range $pages.GroupBy "Section" }}
+                        <div class="category-info " id="grid-view">
+                            <h3 class="category-title"> Top {{ .Key | pluralize }}
+                                <!-- Fragment Identifier -->
+                                <a class="fragment-identifier js-fragment-identifier fragment-identifier-scroll" href="#grid-view">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                                <!-- End of Fragment Identifier -->
+                            </h3>
+                            <!-- Checks for existence of _index.md for a section; if available, pulls from "title" in front matter -->
+                            {{ with $.Site.GetPage "section" .Key }}
+                            <h4 class="category-description">{{.Description}}</h4>
+                            {{ end }}
+
+                        </div>
+                        <div class="grid-view js-grid-view">
+                            <div class="row">
+                                {{ range first 9 .Pages.ByWeight }}
+                                {{ .Render "summary"}}
+                                {{ end }}
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 {{ end }}
 {{ define "footer"}} {{ partial "footer.html" .}} {{end}}
