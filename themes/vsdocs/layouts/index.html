@@ -12,7 +12,7 @@
                 <div class="grid-view js-grid-view">
                     <div class="row">
                         {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
-                        {{ range $pages.GroupBy "Section" }}
+                        {{ range sort ($pages.GroupBy "Section") "Key" "desc" }}
                         <div class="category-info " id="grid-view">
                             <h3 class="category-title"> Top {{ .Key | pluralize }}
                                 <!-- Fragment Identifier -->

@@ -78,6 +78,6 @@ theme= "vsdocs"
   sharing = true
   dateFormatToUse = "2006-01-02"
   orgName = "CodeThat.today"
-  mainSections = ["tutorial", "article"]
+  mainSections = ["article", "tutorial"]
   copyright = "Code snippets licensed under MIT, unless otherwise noted © 2019"
 
