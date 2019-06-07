@@ -1,0 +1,33 @@
+<div class="social-likes social-share social-likes_visible social-likes_ready">
+    {{ if .Site.Params.socialShareTwitter | default true}}
+    <a class="social-likes__widget social-likes__widget_twitter" 
+    href="//twitter.com/share?url={{ .Permalink }}&amp;text={{ .Title }}&amp;via={{ .Site.Social.twitter }}" 
+    target="_blank" title="Share link on Twitter">
+    <span class="social-likes__button social-likes__button_twitter"><span class="social-likes__icon social-likes__icon_twitter"></span>Twitter</span>
+    </a>
+    {{ end }}
+
+    {{ if .Site.Params.socialShareFacebook | default true}}
+    <a class="social-likes__widget social-likes__widget_facebook" 
+    href="//www.facebook.com/sharer/sharer.php?u={{ .Permalink }}" 
+    target="_blank" title="Share link on Facebook">
+    <span class="social-likes__button social-likes__button_facebook"><span class="social-likes__icon social-likes__icon_facebook"></span>Twitter</span>
+    </a>
+    {{ end }}
+
+    {{ if .Site.Params.socialShareReddit | default true}}
+    <a class="social-likes__widget social-likes__widget_reddit" 
+    href="//reddit.com/submit?url={{ .Permalink }}&amp;title={{ .Title }}" 
+    target="_blank" title="Share link on Reddit">
+    <span class="social-likes__button social-likes__button_reddit"><span class="social-likes__icon social-likes__icon_reddit"></span>Reddit</span>
+    </a>
+    {{ end }}
+
+    {{ if .Site.Params.socialShareLinkedin | default true}}
+    <a class="social-likes__widget social-likes__widget_linkedin" 
+    href="//www.linkedin.com/shareArticle?url={{ .Permalink }}&amp;title={{ .Title }}" 
+    target="_blank" title="Share link on Linkedin">
+    <span class="social-likes__button social-likes__button_linkedin"><span class="social-likes__icon social-likes__icon_linkedin"></span>Linkedin</span>
+    </a>
+    {{ end }}
+</div>

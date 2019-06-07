@@ -13,7 +13,6 @@ tags: [
 categories: [
     "Development",
     "go",
-    "index",
 ]
 ---
 
