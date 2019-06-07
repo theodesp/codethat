@@ -2,6 +2,7 @@
 author: "Michael Henderson"
 date: 2014-09-28
 title: "Creating a New Theme"
+description: "In this tutorial we’ll create a trendy double exposure effect in Adobe Photoshop with the help of Blending Modes and Clipping Masks in a few steps."
 tags: [
     "go",
     "golang",
@@ -26,6 +27,22 @@ We'll start with creating a new site with a very basic template. Then we'll add 
 In this tutorial, commands that you enter will start with the "$" prompt. The output will follow. Lines that start with "#" are comments that I've added to explain a point. When I show updates to a file, the ":wq" on the last line means to save the file.
 
 Here's an example:
+
+{{< seperator >}}
+
+{{< steps >}}
+  {{< step 1 "Bake Soda" >}}
+  Bake Soda
+  {{< /step >}}
+
+  {{< step 2 "Bake Soda" >}}
+  Bake Soda
+  {{< /step >}}
+
+  {{< step 3 "Bake Soda" >}}
+  Bake Soda
+  {{< /step >}}
+{{< /steps >}}
 
 ```
 ## this is a comment

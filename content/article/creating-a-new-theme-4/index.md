@@ -37,7 +37,7 @@ func main() {
 }
 {{< /code-block >}}
 
-{{< code-tabs centered="true">}}
+{{< code-tabs centered="true" >}}
   {{< code-tab HTML >}}
   package main
 import (

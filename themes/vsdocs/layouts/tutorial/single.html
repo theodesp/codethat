@@ -1,0 +1,78 @@
+{{ define "title"}} {{ .Site.Title }} - {{ .Title}} {{end}}
+{{ define "header"}} {{ partial "tutorial-header.html" . }} {{end}}
+{{ define "main" }}
+<div id="content">
+  <div class="container">
+    <div class="layout js-layout">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="main-content">
+            {{ partial "toc.html" . }}
+            <!-- Article -->
+            <article class="article">
+              <!-- Article Title -->
+              <h2 class="article-title">{{ .Title }}</h2>
+              <!-- End of Article Title -->
+              <!-- Article Meta -->
+              <ul class="article-meta">
+                <li>
+                  <span class="article-meta-date article-meta-item">{{ .Date.Format "October 28, 2015" }}</span>
+                </li>
+                <li>
+                  {{ if .Params.author }}
+                      {{ with $author := index .Site.Data.assets.authors .Params.author }}
+                      <span class="article-meta-author article-meta-item">
+                        <a href="{{ index $author "homepage" }}">{{ index $author "name" }} </a>
+                      </span>
+                      {{ else }}
+                      <span class="article-meta-author article-meta-item">
+                        {{ .Params.author }}
+                      </span>
+                      {{ end }}
+                  {{ end }}
+                </li>
+                <li>
+                  {{ with .Params.categories }}
+                    {{ range . }}
+                    <span class="article-meta-category article-meta-item">
+                        <a href="{{ "categories/" | absURL }}{{ . | urlize }}">{{ . }}</a> 
+                    </span>
+                    {{ end }}
+                  {{ end }}
+                </li>
+                <li>
+                  <i class="fa fa-clock-o"></i> Reading time {{ .ReadingTime }} min
+                </li>
+              </ul>
+              {{ range .Resources.Match "*/featured*"  }}
+                    {{ $image := .Resize "1280x853" }}
+                    {{ with $image }}
+                    <img src="{{ .Permalink }}" class="article-featured-image" alt="article featured image"> </a>
+                    {{ end }}
+                {{ end }}
+              <div class="article-content">
+                {{ .Content }}
+                {{ with .Params.tags }}
+                <div class="article-tags"> Tags:
+                    {{ range . }}
+                    <a class="article-tag" href="{{ "tags/" | absURL }}{{ . | urlize }}">{{ . }}</a>
+                    {{ end }}
+                  </div>
+                {{ end }}
+                {{ partial "social-share.html" . }}
+              </div>
+              <div class="article-navigation">
+                  {{ with .PrevInSection }}
+                    <a class="article-navigation-prev" href="{{.Permalink}}">{{.Title}}</a>
+                  {{ end }}
+                  {{ with .NextInSection }}
+                    <a class="article-navigation-next" href="{{.Permalink}}">{{.Title}}</a>
+                  {{ end }}
+              </div>
+            </article>
+            {{ partial "related.html" . }}
+          </div>
+        </div>
+      </div>
+    </div>
+    {{ end }}
