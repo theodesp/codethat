@@ -83,9 +83,7 @@ title = "creating a new theme"
 bah and humbug
 $
 ```
-
-
-## Some Definitions
+{{< header id="definitions" title="Some Definitions">}}
 
 There are a few concepts that you need to understand before creating a theme.
 
