@@ -7,13 +7,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="main-content">
-            {{ partial "toc.html" . }}
-            <!-- Article -->
             <article class="article">
-              <!-- Article Title -->
-              <h2 class="article-title">{{ .Title }}</h2>
-              <!-- End of Article Title -->
-              <!-- Article Meta -->
               <ul class="article-meta">
                 <li>
                   <span class="article-meta-date article-meta-item">{{ .Date.Format "October 28, 2015" }}</span>
@@ -44,6 +38,7 @@
                   <i class="fa fa-clock-o"></i> Reading time {{ .ReadingTime }} min
                 </li>
               </ul>
+              {{ partial "toc.html" . }}
               {{ range .Resources.Match "*/featured*"  }}
                     {{ $image := .Resize "1280x853" }}
                     {{ with $image }}
