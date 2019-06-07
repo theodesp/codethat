@@ -1,0 +1,15 @@
+{{ define "title"}} {{ .Site.Title }} - {{ .Title}} {{end}}
+{{ define "header"}} {{ partial "article-header.html" . }} {{end}}
+{{ define "main" }}
+<div id="content">
+  <div class="container">
+    <div class="layout js-layout">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="main-content">
+              {{ .Content }}
+          </div>
+        </div>
+      </div>
+    </div>
+    {{ end }}
