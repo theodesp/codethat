@@ -25,7 +25,3 @@ features = ["Minimalism","Mobile-first Design",
   "SEO Site Verification"]
 min_version = 0.19
 
-[author]
-  name = "Theo Despoudis"
-  homepage = "https://github.com/theodesp"
-

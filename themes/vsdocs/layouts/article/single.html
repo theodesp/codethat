@@ -18,9 +18,17 @@
                   <span class="article-meta-date article-meta-item">{{ .Date.Format "October 28, 2015" }}</span>
                 </li>
                 <li>
-                  <!-- <span class="article-meta-author article-meta-item">
-                    <a href="#">John Doe</a>
-                  </span> -->
+                  {{ if .Params.author }}
+                      {{ with $author := index .Site.Data.assets.authors .Params.author }}
+                      <span class="article-meta-author article-meta-item">
+                        <a href="{{ index $author "homepage" }}">{{ index $author "name" }} </a>
+                      </span>
+                      {{ else }}
+                      <span class="article-meta-author article-meta-item">
+                        {{ .Params.author }}
+                      </span>
+                      {{ end }}
+                  {{ end }}
                 </li>
                 <li>
                   {{ with .Params.categories }}

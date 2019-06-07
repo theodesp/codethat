@@ -23,7 +23,7 @@
                             </h3>
                             <!-- Checks for existence of _index.md for a section; if available, pulls from "title" in front matter -->
                             {{ with $.Site.GetPage "section" .Key }}
-                            <h4 class="category-description">{{.Description}}</h4>
+                            <h4 class="category-description">{{ .Description }}</h4>
                             {{ end }}
 
                         </div>
