@@ -27,6 +27,37 @@ In this tutorial, commands that you enter will start with the "$" prompt. The ou
 
 Here's an example:
 
+{{< code-block go >}}
+package main
+import (
+    "fmt"
+)
+func main() {
+    fmt.Println("Hello world") // Amazing logic here
+}
+{{< /code-block >}}
+
+{{< code-tabs centered="true">}}
+  {{< code-tab HTML >}}
+  package main
+import (
+    "fmt"
+)
+func main() {
+    fmt.Println("Hello world") // Amazing logic here
+}
+  {{< /code-tab >}}
+  {{< code-tab CSS >}}
+  package main
+import (
+    "fmt"
+)
+func main() {
+    fmt.Println("Hello world") // Amazing logic here
+}
+  {{< /code-tab >}}
+{{< /code-tabs >}}
+
 ```
 ## this is a comment
 $ echo this is a command

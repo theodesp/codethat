@@ -11114,7 +11114,7 @@ li.browser-partial:hover .browser-icon:after {
  * @author Lea Verou
  */
 code[class*="language-"],
-pre[class*="language-"] {
+pre[class*="language-"], .chroma {
   color: #333;
   text-shadow: 0 1px white;
   font-family: Consolas, Monaco, 'Andale Mono', monospace;
@@ -11135,31 +11135,32 @@ pre[class*="language-"] {
 pre[class*="language-"]::-moz-selection,
 pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection,
-code[class*="language-"] ::-moz-selection {
+code[class*="language-"] ::-moz-selection, .chroma {
   text-shadow: none;
   background: #b3d4fc;
 }
 pre[class*="language-"]::selection,
 pre[class*="language-"] ::selection,
 code[class*="language-"]::selection,
-code[class*="language-"] ::selection {
+code[class*="language-"] ::selection, .chroma {
   text-shadow: none;
   background: #b3d4fc;
 }
 @media print {
   code[class*="language-"],
-  pre[class*="language-"] {
+  pre[class*="language-"], 
+  .chroma {
     text-shadow: none;
   }
 }
 /* Code blocks */
-pre[class*="language-"] {
+pre[class*="language-"], .chroma {
   padding: 1em;
   margin: .5em 0;
   overflow: auto;
 }
 :not(pre) > code[class*="language-"],
-pre[class*="language-"] {
+pre[class*="language-"], .chroma {
   background: #f5f2f0;
 }
 /* Inline code */
@@ -11282,7 +11283,8 @@ pre.line-numbers > code {
   border-radius: 3px;
 }
 .code-highlight :not(pre) > code[class*=language-],
-.code-highlight pre[class*=language-] {
+.code-highlight pre[class*=language-],
+.code-highlight .chroma {
   background-color: #fdfdfd;
   border: 1px solid #dae0e7;
 }
@@ -11325,14 +11327,19 @@ pre.line-numbers > code {
 .code-highlight-attached .code-highlight {
   margin-bottom: 0;
 }
-.code-highlight-attached .code-highlight:first-child pre[class*=language-] {
+.code-highlight-attached .code-highlight:first-child pre[class*=language-],
+.code-highlight-attached .code-highlight:first-child .chroma
+{
   border-radius: 3px 3px 0 0;
 }
-.code-highlight-attached .code-highlight:last-child pre[class*=language-] {
+.code-highlight-attached .code-highlight:last-child pre[class*=language-],
+.code-highlight-attached .code-highlight:last-child .chroma
+ {
   border-radius: 0 0 3px 3px;
   border-bottom: 1px solid #e1e5eb;
 }
-.code-highlight-attached .code-highlight pre[class*=language-] {
+.code-highlight-attached .code-highlight pre[class*=language-],
+.code-highlight-attached .code-highlight .chroma {
   border-bottom: 0;
   margin: 0;
   border-radius: 0;

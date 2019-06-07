@@ -10,12 +10,12 @@
             <!-- Article -->
             <article class="article">
               <!-- Article Title -->
-              <h2 class="article-title"> {{ .Title }}</h2>
+              <h2 class="article-title">{{ .Title }}</h2>
               <!-- End of Article Title -->
               <!-- Article Meta -->
               <ul class="article-meta">
                 <li>
-                  <span class="article-meta-date article-meta-item">{{ .Date.Format "October 28, 2015" }} </span>
+                  <span class="article-meta-date article-meta-item">{{ .Date.Format "October 28, 2015" }}</span>
                 </li>
                 <li>
                   <!-- <span class="article-meta-author article-meta-item">
@@ -54,10 +54,10 @@
               </div>
               <div class="article-navigation">
                   {{ with .PrevInSection }}
-                    <a class="article-navigation-prev" href="{{.Permalink}}"> {{.Title}}</a>
+                    <a class="article-navigation-prev" href="{{.Permalink}}">{{.Title}}</a>
                   {{ end }}
                   {{ with .NextInSection }}
-                    <a class="article-navigation-next" href="{{.Permalink}}"> {{.Title}}</a>
+                    <a class="article-navigation-next" href="{{.Permalink}}">{{.Title}}</a>
                   {{ end }}
               </div>
             </article>

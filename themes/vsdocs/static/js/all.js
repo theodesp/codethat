@@ -22576,7 +22576,7 @@ module.exports = exports['default'];
 
 		var clipboard = new Clipboard('.js-copy-to-clipboard', {
 			target: function (trigger) {
-				return $(trigger).parent().find('.js-code')[0];
+				return $(trigger).parent().find('code')[0];
 			}
 		});
 

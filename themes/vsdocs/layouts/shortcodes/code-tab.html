@@ -1,0 +1,14 @@
+{{- $lang := .Get 0 -}}
+{{- $content := .Inner -}}
+{{- with .Parent -}}
+  <h4 class="tab-title">{{ $lang }}</h4>
+  <div class="tab-content">
+      <div class="code-highlight code-highlight-with-label" data-label="{{ $lang }}"><span class="js-copy-to-clipboard copy-code">copy</span>{{ highlight (trim $content "\n\r") ($lang) "" }}
+      </div>
+  </div>
+{{- else -}}
+<div class="code-highlight code-highlight-with-label" data-label="{{ $lang }}"><span class="js-copy-to-clipboard copy-code">copy</span>{{ highlight (trim .Inner "\n\r") ($lang) "" }}
+</div>
+{{ end }}
+
+
