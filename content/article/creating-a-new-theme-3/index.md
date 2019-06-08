@@ -28,6 +28,15 @@ In this tutorial, commands that you enter will start with the "$" prompt. The ou
 
 {{< note title="hello" content="world" class="green">}}
 
+{{< guide-steps >}}
+    {{< guide-step 1 "Hello" >}}
+    World
+    {{< /guide-step >}}
+     {{< guide-step 2 "World" >}}
+        Hello
+        {{< /guide-step >}}
+{{< /guide-steps >}}
+
 Here's an example:
 
 ```
