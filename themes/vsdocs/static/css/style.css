@@ -16743,6 +16743,7 @@ input.changelog-input {
   outline: none;
   font-weight: 300;
   font-size: 19px;
+  margin-left: 50px;
 }
 .subscribe-input::-webkit-input-placeholder {
   font-size: 19px;

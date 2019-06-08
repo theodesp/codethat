@@ -14,6 +14,10 @@ Let's keep in touch [via Twitter](http://twitter.com/nerdokto).
 
 {{< figure src="/img/me.jpg" class="text-center" width="300">}}
 
-Hi. My name is Theo and I'm the person behind this website. I'm a Senior Developer by trade and in love of Web Technologies. Writing code and solving problems is always my passion.
+Hello there. My name is Theo and I'm the person behind this website. I'm a Senior Developer by trade and in love of Web Technologies. 
+Writing code and solving problems was always my passion. I created this site, so I can share my experiences with the fellow readers and 
+also to learn new things myself!
 
 In addition to my engineering work, I like to help other people learn how to code. I'm currently a mentor with [CodeInstitute](https://codeinstitute.net/) and [CodeMentor](https://www.codementor.io/theofanisdespoudis).
+
+Feel free to get in touch via [Twitter](http://twitter.com/nerdokto) or [Dev.to](https://dev.to/theodesp).  
