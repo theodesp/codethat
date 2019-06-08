@@ -6,7 +6,11 @@ title = "Top Quality Developer Tutorials CodeThat.today"
 Paginate = 10
 pygmentsUseClasses = true
 pygmentsCodeFences = true
-theme= "vsdocs"
+theme = "vsdocs"
+
+[outputs]
+  home = [ "HTML", "RSS", "JSON"]
+
 
 [taxonomies]
   category = "categories"

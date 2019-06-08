@@ -1,3 +1,7 @@
-<script src="{{ "js/all.js" | relURL }}" type="text/javascript"></script>
-<script src="{{ "js/vendor.js" | relURL }}" type="text/javascript"></script>
+{{ $all := resources.Get "js/all.js" | minify | fingerprint }}
+<script src="{{ $all.Permalink }}" type="text/javascript"></script>
+{{ $vendor := resources.Get "js/vendor.js" | minify | fingerprint }}
+<script src="{{ $vendor.Permalink }}" type="text/javascript"></script>
+{{ $search := resources.Get "js/search.js" | minify | fingerprint }}
+<script type="text/javascript" src="{{ $search.Permalink }}"></script>
 <script src="{{ "js/custom.js" | relURL }}" type="text/javascript"></script>

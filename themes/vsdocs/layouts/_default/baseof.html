@@ -22,7 +22,8 @@
     <link href="{{ "/css/style.css" | relURL }}" rel="stylesheet" type="text/css">
     <link href="{{ "/css/syntax.css" | relURL }}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="{{ "/css/custom.css" | relURL }}" type="text/css">
-    <script type="text/javascript" src="{{ "js/modernizr.js" | relURL }}">
+    {{ $modernizr := resources.Get "js/modernizr.js" | minify | fingerprint }}
+    <script type="text/javascript" src="{{ $modernizr.Permalink }}">
 
     {{ range .Site.Params.customCSS }} <link rel="stylesheet" href="{{ . | absURL }}" /> {{ end }}
   </script>

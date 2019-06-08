@@ -1,0 +1,12 @@
+<div class="header-subscribe-form helper center">
+  <form action="#">
+      <input type="text" name="search" data-search-input id="search-by"  autocomplete="off" id="search-by" class="subscribe-input" placeholder="Looking for...">
+      <button class="subscribe-button">
+          <i class="fa fa-search"></i>
+      </button>
+  </form>
+</div>
+<script>window.baseurl = "{{.Site.BaseURL}}";</script>
+{{ $lunr := resources.Get "js/lunr.js" | minify | fingerprint }}
+<script type="text/javascript" src="{{ $lunr.Permalink }}"></script>
+
