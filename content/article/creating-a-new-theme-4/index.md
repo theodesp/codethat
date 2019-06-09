@@ -27,6 +27,20 @@ In this tutorial, commands that you enter will start with the "$" prompt. The ou
 
 Here's an example:
 
+{{< interactive-steps >}}
+    {{< interactive-step "Hello world" >}}
+    {{< code-block go >}}
+package main
+import (
+    "fmt"
+)
+func main() {
+    fmt.Println("Hello world") // Amazing logic here
+}
+    {{< /code-block >}}
+    {{< /interactive-step >}}
+{{< /interactive-steps >}}
+
 {{< code-block go >}}
 package main
 import (
