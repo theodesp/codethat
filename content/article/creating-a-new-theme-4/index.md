@@ -14,6 +14,7 @@ categories: [
     "Development",
     "go",
 ]
+levels: ["basic"]
 ---
 
 

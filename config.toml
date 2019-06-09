@@ -11,11 +11,11 @@ theme = "vsdocs"
 [outputs]
   home = [ "HTML", "RSS", "JSON"]
 
-
 [taxonomies]
   category = "categories"
   series = "series"
   tag = "tags"
+  level = "levels"
 
 [[menu.main]]
     name = "Go"

@@ -1,0 +1,50 @@
+{{ $skill := .level }}
+<div class="skill small inline">
+    <h3 class="skill-title">Skill level: {{ $skill | title }}</h3>
+    <ul class="skill-level">
+        {{ if eq $skill "basic" }}
+        <li>
+            <span class="fa fa-star"></span>
+        </li>
+        <li>
+            <span class="fa fa-star"></span>
+        </li>
+        <li>
+            <span class="fa fa-star"></span>
+        </li>
+        {{ end }}
+
+        {{ if eq $skill "medium" }}
+        <li>
+            <span class="fa fa-star"></span>
+        </li>
+        <li>
+            <span class="fa fa-star"></span>
+        </li>
+        <li>
+            <span class="fa fa-star"></span>
+        </li>
+        <li>
+            <span class="fa fa-star"></span>
+        </li>
+        {{ end }}
+
+        {{ if eq $skill "advanced" }}
+        <li>
+            <span class="fa fa-star"></span>
+        </li>
+        <li>
+            <span class="fa fa-star"></span>
+        </li>
+        <li>
+            <span class="fa fa-star"></span>
+        </li>
+        <li>
+            <span class="fa fa-star"></span>
+        </li>
+        <li>
+            <span class="fa fa-star"></span>
+        </li>
+        {{ end }}
+    </ul>
+</div>

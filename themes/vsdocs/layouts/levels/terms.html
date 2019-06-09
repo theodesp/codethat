@@ -1,0 +1,79 @@
+{{ define "title"}} {{ .Site.Title }} - {{ .Title}} {{end}}
+{{ define "header"}} {{ partial "levels-header.html" . }} {{end}}
+{{ define "main" }}
+
+{{ $termName := .Data.Singular }}
+{{ $terms := .Data.Terms.ByCount }}
+{{ $length := len $terms }}
+{{ $type := .Type }}
+<main>
+    <div id="content">
+        <div class="container">
+            <div class="layout js-layout">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="main-content">
+                            <!-- Blog Page -->
+                            <div class="blog">
+                                <div class="category-info " id="grid-view">
+                                    <h3 class="category-title">{{ partial "skill.html" (dict "context" . "level" "basic")}}</h3>
+                                </div>
+                                <div class="row">
+                                    {{ $pages := .Site.Taxonomies.levels.basic}}
+                                    {{ range $pages }}
+                                    <div class="col-md-4">
+                                        <div class="grid-view-elem js-grid-view-elem">
+                                            <h3 class="grid-view-elem-title">
+                                                <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+                                                <span class="grid-view-title-descr"></span>
+                                            </h3>
+                                            <p class="grid-view-elem-description"> {{ .Page.Summary | truncate 100 }} </p>
+                                        </div>
+                                    </div>
+                                    {{ end }}
+                                </div>
+
+                                <div class="category-info " id="grid-view">
+                                    <h3 class="category-title">{{ partial "skill.html" (dict "context" . "level" "medium")}}</h3>
+                                </div>
+                                <div class="row">
+                                    {{ $pages := .Site.Taxonomies.levels.medium}}
+                                    {{ range $pages }}
+                                    <div class="col-md-4">
+                                        <div class="grid-view-elem js-grid-view-elem">
+                                            <h3 class="grid-view-elem-title">
+                                                <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+                                                <span class="grid-view-title-descr"></span>
+                                            </h3>
+                                            <p class="grid-view-elem-description"> {{ .Page.Summary | truncate 100 }} </p>
+                                        </div>
+                                    </div>
+                                    {{ end }}
+                                </div>
+
+                                <div class="category-info " id="grid-view">
+                                    <h3 class="category-title">{{ partial "skill.html" (dict "context" . "level" "advanced")}}</h3>
+                                </div>
+                                <div class="row">
+                                    {{ $pages := .Site.Taxonomies.levels.advanced}}
+                                    {{ range $pages }}
+                                    <div class="col-md-4">
+                                        <div class="grid-view-elem js-grid-view-elem">
+                                            <h3 class="grid-view-elem-title">
+                                                <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+                                                <span class="grid-view-title-descr"></span>
+                                            </h3>
+                                            <p class="grid-view-elem-description"> {{ .Page.Summary | truncate 100 }} </p>
+                                        </div>
+                                    </div>
+                                    {{ end }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{{ end }}
