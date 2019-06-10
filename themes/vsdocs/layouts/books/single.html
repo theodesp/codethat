@@ -1,0 +1,39 @@
+{{ define "title"}} {{ .Site.Title }} - {{ .Title}} {{end}}
+{{ define "header"}} {{ partial "article-header.html" . }} {{end}}
+{{ define "main" }}
+<div id="content">
+    <div class="container">
+        <div class="layout js-layout">
+            <div class="row">
+                <div class="col-md-12">
+                    {{ $books := .Params.resources }}
+                    {{ range $books }}
+                    <div class="category-info " id="single-book">
+                        <h3 class="category-title">
+                            <a class="fragment-identifier js-fragment-identifier fragment-identifier-scroll" href="{{ .src }}">
+                                <i class="fa fa-link"></i>
+                            </a>
+                        </h3>
+                        <h4 class="category-description">{{ .promo }}</h4>
+                    </div>
+                    <div class="book">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <img src="{{ .image | absURL }}" class="book-image" alt="book cover"> </div>
+                            <div class="col-md-7">
+                                <h3 class="book-title">{{ .title }}</h3>
+                                <p class="book-description">{{ .description }}</p>
+                                <ul class="book-download-list">
+                                    <li class="book-download-item">
+                                        <a href="{{ .src }}" target="_blank">
+                                            <i class="fa fa-link"></i> View </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+{{ end }}

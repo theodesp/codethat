@@ -1,4 +1,4 @@
 <li class="accordion-item accordion-open">
     <h4 class="accordion-title">{{ .Get 0 }}</h4>
-    <div class="accordion-description">{{ .Inner }}</div>
+    <div class="accordion-description">{{ .Inner | markdownify | emojify }}</div>
 </li>

@@ -9,7 +9,8 @@ pygmentsCodeFences = true
 theme = "vsdocs"
 
 [outputs]
-  home = [ "HTML", "RSS", "JSON"]
+  home = [ "HTML", "RSS", "JSON" ]
+  section = [ "HTML", "RSS" ]
 
 [taxonomies]
   category = "categories"
@@ -37,10 +38,14 @@ theme = "vsdocs"
     name = "Scala"
     weight = -60
     url = "/categories/scala/"
+[[menu.main]]
+    name = "Books"
+    weight = -50
+    url = "/books/"
 
 [[menu.main]]
     name = "more"
-    weight = -50
+    weight = -40
     url = "/"
 
 [[menu.main]]

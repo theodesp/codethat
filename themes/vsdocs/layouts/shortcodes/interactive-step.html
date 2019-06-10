@@ -1,1 +1,1 @@
-<h4 class="step-interactive-title">{{- .Get 0 -}}</h4><div class="step-interactive-content">{{- .Inner -}}</div>
+<h4 class="step-interactive-title">{{- .Get 0 | markdownify | emojify -}}</h4><div class="step-interactive-content">{{- .Inner | markdownify | emojify -}}</div>

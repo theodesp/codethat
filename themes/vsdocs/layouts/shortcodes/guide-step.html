@@ -1,5 +1,5 @@
 <li class="visual-guide-step">
     <span class="visual-guide-step-number">{{ .Get 0 }}</span>
-    <h4 class="visual-guide-step-title">{{ .Get 1 }}</h4>
-    <p class="visual-guide-step-description">{{ .Inner }}</p>
+    <h4 class="visual-guide-step-title">{{ .Get 1 | markdownify | emojify }}</h4>
+    <p class="visual-guide-step-description">{{ .Inner | markdownify | emojify }}</p>
 </li>

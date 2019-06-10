@@ -1,5 +1,5 @@
 <li class="step">
   <span class="step-number">{{ .Get 0 }}</span>
-  <h4 class="step-title">{{ .Get 1 }}</h4>
-  <div class="step-content">{{ .Inner }}</div>
+  <h4 class="step-title">{{ .Get 1 | markdownify | emojify }}</h4>
+  <div class="step-content">{{ .Inner | markdownify | emojify }}</div>
 </li>

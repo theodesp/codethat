@@ -1,4 +1,4 @@
 <div class="note js-note {{ with .Get "class"}} {{.}} {{ end }}">
-    <h4 class="note-title"> {{.Get "title" }} </h4>
-    <p class="note-description"> {{.Get "content" }}</p>
+    <h4 class="note-title"> {{.Get "title" | markdownify | emojify }} </h4>
+    <p class="note-description"> {{.Get "content" | markdownify | emojify }}</p>
 </div>
