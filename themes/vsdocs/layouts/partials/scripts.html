@@ -2,6 +2,8 @@
 <script src="{{ $all.Permalink }}" type="text/javascript"></script>
 {{ $vendor := resources.Get "js/vendor.js" | minify | fingerprint }}
 <script src="{{ $vendor.Permalink }}" type="text/javascript"></script>
+{{ $lunr := resources.Get "js/lunr.js" | minify | fingerprint }}
+<script type="text/javascript" src="{{ $lunr.Permalink }}"></script>
 {{ $search := resources.Get "js/search.js" | minify | fingerprint }}
 <script type="text/javascript" src="{{ $search.Permalink }}"></script>
 <script src="{{ "js/custom.js" | relURL }}" type="text/javascript"></script>

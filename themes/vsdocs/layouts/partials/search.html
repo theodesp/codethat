@@ -6,7 +6,4 @@
       </button>
   </form>
 </div>
-<script>window.baseurl = "{{.Site.BaseURL}}";</script>
-{{ $lunr := resources.Get "js/lunr.js" | minify | fingerprint }}
-<script type="text/javascript" src="{{ $lunr.Permalink }}"></script>
 

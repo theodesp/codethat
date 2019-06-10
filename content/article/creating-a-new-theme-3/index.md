@@ -27,6 +27,15 @@ We'll start with creating a new site with a very basic template. Then we'll add 
 
 In this tutorial, commands that you enter will start with the "$" prompt. The output will follow. Lines that start with "#" are comments that I've added to explain a point. When I show updates to a file, the ":wq" on the last line means to save the file.
 
+
+{{< video-player
+    poster="http://themes.vsart.me/presentation/vsdocs/video/poster.png"
+    mp4src="http://themes.vsart.me/presentation/vsdocs/video/video.mp4"
+    ogvsrc="http://themes.vsart.me/presentation/vsdocs/video/video.ogv"
+    mp4src="http://themes.vsart.me/presentation/vsdocs/video/video.mp4"
+    >}}
+{{< audio-player poster="http://themes.vsart.me/presentation/vsdocs/audio/1.jpg" src="http://themes.vsart.me/presentation/vsdocs/audio/1.mp3">}}
+
 {{< note title="hello" content="world" class="green">}}
 
 {{< guide-steps >}}

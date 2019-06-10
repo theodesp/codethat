@@ -23,6 +23,7 @@
     <link href="{{ "/css/syntax.css" | relURL }}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="{{ "/css/custom.css" | relURL }}" type="text/css">
     {{ $modernizr := resources.Get "js/modernizr.js" | minify | fingerprint }}
+    <script>baseurl = "{{.Site.BaseURL}}";</script>
     <script type="text/javascript" src="{{ $modernizr.Permalink }}">
 
     {{ range .Site.Params.customCSS }} <link rel="stylesheet" href="{{ . | absURL }}" /> {{ end }}

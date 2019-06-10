@@ -1,0 +1,9 @@
+{{ $poster := .Get "poster" }}
+<video class="video-js" controls preload="auto" poster="{{ $poster }}">
+    {{ with (.Get "mp4src") }}<source src="{{.}}" type='video/mp4'> {{ end }}
+    {{ with (.Get "ogvsrc") }}<source src="{{.}}" type='video/ogv'> {{ end }}
+    {{ with (.Get "webmsrc") }} <source src="{{.}}" type='video/webm'> {{ end }}
+        <!--<p class="vjs-no-js"> To view this video please enable JavaScript, and consider upgrading to a web browser that-->
+            <!--<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>-->
+        <!--</p>-->
+</video>
