@@ -1,19 +1,81 @@
-{{ define "title"}} {{ .Site.Title }} - {{ .Title}} {{end}}
+{{ define "title"}} {{ .Site.Title }} - {{ .Title }} {{end}}
 {{ define "header"}} {{ partial "article-header.html" . }} {{end}}
 {{ define "main" }}
-<main>
-    <article>
-        <header>
-            <h1>{{.Title}}</h1>
-        </header>
-        {{.Content}}
-    </article>
-    <ul>
-        {{ range .Pages }}
-        <li>
-            <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
-        </li>
-        {{ end }}
-    </ul>
-</main>
+<div id="content">
+    <div class="container">
+        <div class="layout js-layout">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="main-content">
+                        <!-- Blog Page -->
+                        <div class="blog">
+                            <div class="category-info " id="grid-view">
+                                <h3 class="category-title"> Top {{ .Section | title | pluralize  }} </h3>
+                            </div>
+                            {{ $pages := .Pages.ByWeight }}
+                            <div class="row">
+                                {{ range first 3 $pages }}
+                                <div class="col-md-4 col-sm-4">
+                                    <!-- Blog Grid -->
+                                    <div class="blog-grid">
+                                        <div class="blog-grid-image">
+                                            <a href="{{ .Permalink }}">
+                                                <span class="blog-grid-image-over"></span>
+                                                {{ range .Resources.Match "*/featured*"  }}
+                                                {{ $image := .Resize "1280x853" }}
+                                                {{ with $image }}
+                                                <img src="{{ .Permalink }}" class="" alt="article image"> </a>
+                                            {{ end }}
+                                            {{ else }}
+                                            <img src="http://placehold.it/1280x853" class="" alt="article image"> </a>
+                                            {{ end }}
+                                            </a>
+                                        </div>
+
+                                        <h3 class="blog-grid-title">
+                                            <a href="{{ .Permalink }}">{{ .Title }}</a>
+                                        </h3>
+                                        <p class="blog-grid-excerpt"> {{ .Summary | truncate 100 }} </p>
+                                        <div class="blog-grid-meta">
+                                            <span class="blog-grid-date">{{.Date.Format "January 2, 2006"}}</span>
+                                            <span class="blog-grid-author">by
+                                                {{ if .Params.author }}
+                                                {{ with $author := index .Site.Data.assets.authors .Params.author }}
+                                                <a href="{{ index $author "homepage" }}">{{ index $author "name" }} </a>
+                                                {{ else }}
+                                                {{ .Params.author }}
+                                                {{ end }}
+                                                {{ end }}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- End of Blog Grid -->
+                                </div>
+                                {{ end }}
+                            </div>
+                            {{ if gt (len $pages) 3 }}
+                                <div class="category-info " id="grid-view">
+                                    <h3 class="category-title"> And the rest </h3>
+                                </div>
+                                <div class="row">
+                                    {{ range after 2 $pages.ByDate }}
+                                    <div class="col-md-4">
+                                        <div class="grid-view-elem js-grid-view-elem">
+                                            <h3 class="grid-view-elem-title">
+                                                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                                                <span class="grid-view-title-descr"></span>
+                                            </h3>
+                                            <p class="grid-view-elem-description"> {{ .Summary | truncate 100 }} </p>
+                                        </div>
+                                    </div>
+                                    {{ end }}
+                                </div>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {{ end }}

@@ -12,7 +12,8 @@
                 <div class="grid-view js-grid-view">
                     <div class="row">
                         {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
-                        {{ range sort ($pages.GroupBy "Section") "Key" "desc" }}
+                        {{ $groups := sort ($pages.GroupBy "Section") "Key" "desc" }}
+                        {{ range $groups }}
                         <div class="category-info " id="grid-view">
                             <h3 class="category-title"> Top {{ .Key | pluralize }}
                                 <!-- Fragment Identifier -->
@@ -25,14 +26,20 @@
                             {{ with $.Site.GetPage "section" .Key }}
                             <h4 class="category-description">{{ .Description }}</h4>
                             {{ end }}
-
                         </div>
                         <div class="grid-view js-grid-view">
                             <div class="row">
-                                {{ range first 9 .Pages.ByWeight }}
+                                {{ range first 6 .Pages.ByWeight }}
                                 {{ .Render "summary" }}
                                 {{ end }}
                             </div>
+                            {{ with $.Site.GetPage "section" .Key }}
+                                {{ if gt (len .Pages.ByWeight) 6 }}
+                                    <div class="row">
+                                        <a href="{{ .Permalink }}" class="button stroke rounded small blue-light">View all</a>
+                                    </div>
+                                {{ end }}
+                            {{ end }}
                         </div>
                         {{ end }}
                     </div>
