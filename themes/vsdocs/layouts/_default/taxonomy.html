@@ -37,7 +37,7 @@
                                         </h3>
                                         <p class="blog-grid-excerpt"> {{ .Summary | truncate 100 }} </p>
                                         <div class="blog-grid-meta">
-                                            <span class="blog-grid-date">{{.Date.Format "January 2, 2006"}}</span>
+                                            <span class="blog-grid-date">{{ .Date.Format "Oct 03 2006" }}</span>
                                             <span class="blog-grid-author">by
                                                 {{ if .Params.author }}
                                                 {{ with $author := index .Site.Data.assets.authors .Params.author }}

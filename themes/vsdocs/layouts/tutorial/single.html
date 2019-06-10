@@ -10,7 +10,7 @@
             <article class="article">
               <ul class="article-meta">
                 <li>
-                  <span class="article-meta-date article-meta-item">{{ .Date.Format "October 28, 2015" }}</span>
+                  <span class="article-meta-date article-meta-item">{{ .Date.Format "Oct 03 2006" }}</span>
                 </li>
                 <li>
                   {{ if .Params.author }}
@@ -26,16 +26,24 @@
                   {{ end }}
                 </li>
                 <li>
+                  {{ $section := $.Site.GetPage "categories" }}
                   {{ with .Params.categories }}
                     {{ range . }}
                     <span class="article-meta-category article-meta-item">
-                        <a href="{{ "categories/" | absURL }}{{ . | urlize }}">{{ . }}</a> 
+                        <a href="{{ $section.Permalink }}{{ . | urlize }}">{{ . }}</a>
+
                     </span>
                     {{ end }}
                   {{ end }}
                 </li>
                 <li>
                   <i class="fa fa-clock-o"></i> Reading time {{ .ReadingTime }} min
+                </li>
+                <li>
+                  {{ $levels := $.Site.GetPage "levels" }}
+                    <span class="article-meta-item">
+                        <a href="{{ $levels.Permalink }}">Skill level {{ .Params.levels }}</a>
+                    </span>
                 </li>
               </ul>
               {{ partial "toc.html" . }}
@@ -47,10 +55,11 @@
                 {{ end }}
               <div class="article-content">
                 {{ .Content }}
+                {{ $tags := $.Site.GetPage "tags" }}
                 {{ with .Params.tags }}
                 <div class="article-tags"> Tags:
                     {{ range . }}
-                    <a class="article-tag" href="{{ "tags/" | absURL }}{{ . | urlize }}">{{ . }}</a>
+                    <a class="article-tag" href="{{ $tags.Permalink }}{{ . | urlize }}">{{ . }}</a>
                     {{ end }}
                   </div>
                 {{ end }}

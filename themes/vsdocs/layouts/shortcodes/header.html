@@ -1,5 +1,3 @@
-<h3 class="category-title" id="{{ .Get "id" }}">{{ .Get "title" | markdownify | emojify }}
-  <a class="fragment-identifier js-fragment-identifier fragment-identifier-scroll" href="#{{ .Get "id" }}">
-    <i class="fa fa-link"></i>
-  </a>
+{{ $id := .Get "id" | default (.Get "title") | urlize }}
+<h3 class="category-title" id="{{ $id }}">{{- .Get "title" | markdownify | emojify -}}<a class="fragment-identifier js-fragment-identifier fragment-identifier-scroll" href="#{{ $id }}"><i class="fa fa-link"></i></a>
 </h3>

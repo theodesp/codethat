@@ -4,6 +4,6 @@
             <a href='{{ .Permalink }}'>{{ .Title }}</a>
             <span class="grid-view-title-descr"></span>
         </h3>
-        <p class="grid-view-elem-description"> {{ .Summary }} </p>
+        <p class="grid-view-elem-description"> {{ .Params.summary | default .Summary }} </p>
     </div>
 </div>
