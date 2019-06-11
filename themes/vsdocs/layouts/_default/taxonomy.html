@@ -53,6 +53,7 @@
                                 </div>
                                 {{ end }}
                             </div>
+                            {{ if gt (len $pages) 3 }}
                             <div class="category-info " id="grid-view">
                                 <h3 class="category-title"> And the rest </h3>
                             </div>
@@ -69,6 +70,7 @@
                                 </div>
                                 {{ end }}
                             </div>
+                            {{ end }}
                         </div>
                     </div>
                 </div>
