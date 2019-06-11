@@ -19,9 +19,9 @@
     {{ partial "favicon" . }}
 
     <!-- Include StyleSheets -->
-    <link href="{{ "/css/style.css" | relURL }}" rel="stylesheet" type="text/css">
-    <link href="{{ "/css/syntax.css" | relURL }}" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="{{ "/css/custom.css" | relURL }}" type="text/css">
+    <link href="{{ "/css/style.css" | absURL }}" rel="stylesheet" type="text/css">
+    <link href="{{ "/css/syntax.css" | absURL }}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ "/css/custom.css" | absURL }}" type="text/css">
     {{ $modernizr := resources.Get "js/modernizr.js" | minify | fingerprint }}
     <script>baseurl = "{{.Site.BaseURL}}";</script>
     <script type="text/javascript" src="{{ $modernizr.Permalink }}">
