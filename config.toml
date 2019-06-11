@@ -52,9 +52,9 @@ googleAnalytics = "UA-141826516-1"
 
 [[menu.main]]
     parent = "more"
-    name = "Software Engineering"
+    name = "Development"
     weight = -100
-    url = "/categories/software-engineering/"
+    url = "/categories/development/"
 
 [[menu.footer]]
     name = "About"
