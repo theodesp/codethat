@@ -7,7 +7,7 @@ Paginate = 10
 pygmentsUseClasses = true
 pygmentsCodeFences = true
 theme = "vsdocs"
-publishDir = "public"
+publishDir = "docs"
 
 [outputs]
   home = [ "HTML", "RSS", "JSON" ]
