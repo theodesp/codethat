@@ -18311,6 +18311,7 @@ input.changelog-input {
   .subscribe-button {
     padding: 18px 18px 17px 18px;
     z-index: 3;
+    margin-right: 0!important;
   }
   .subscribe-button i {
     margin-right: 0;
@@ -18320,6 +18321,7 @@ input.changelog-input {
   }
   .subscribe-input {
     font-size: 16px;
+    margin-left: 0;
   }
   .subscribe-input::-webkit-input-placeholder {
     font-size: 16px;
