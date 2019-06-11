@@ -8,6 +8,7 @@ pygmentsUseClasses = true
 pygmentsCodeFences = true
 canonifyurls = true
 theme = "vsdocs"
+googleAnalytics = "UA-141826516-1"
 
 [outputs]
   home = [ "HTML", "RSS", "JSON" ]
