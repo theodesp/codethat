@@ -8,7 +8,6 @@ pygmentsUseClasses = true
 pygmentsCodeFences = true
 canonifyurls = true
 theme = "vsdocs"
-publishDir = "docs"
 
 [outputs]
   home = [ "HTML", "RSS", "JSON" ]
