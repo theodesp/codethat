@@ -1,4 +1,4 @@
-baseURL = "https://theodesp.github.io/codethat"
+baseURL = "https://codethat.onrender.com"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 defaultContenLanguageInSubdir = "true"
