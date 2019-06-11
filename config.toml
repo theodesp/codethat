@@ -63,7 +63,7 @@ theme = "vsdocs"
 [[menu.footer]]
     name = "Privacy Policy"
     weight = -100
-    url = "/privacy/"
+    url = "https://www.iubenda.com/privacy-policy/63392594"
 
 [Params]
   RSSLink = "/index.xml"
