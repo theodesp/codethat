@@ -14,10 +14,10 @@
                         {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
                         {{ $groups := sort ($pages.GroupBy "Section") "Key" "desc" }}
                         {{ range $groups }}
-                        <div class="category-info " id="grid-view">
+                        <div class="category-info " id="{{ .Key | urlize }}-view">
                             <h3 class="category-title"> Top {{ .Key | pluralize }}
                                 <!-- Fragment Identifier -->
-                                <a class="fragment-identifier js-fragment-identifier fragment-identifier-scroll" href="#grid-view">
+                                <a class="fragment-identifier js-fragment-identifier fragment-identifier-scroll" href="#{{ .Key | urlize }}-view">
                                     <i class="fa fa-link"></i>
                                 </a>
                                 <!-- End of Fragment Identifier -->
@@ -29,7 +29,7 @@
                         </div>
                         <div class="grid-view js-grid-view">
                             <div class="row">
-                                {{ range first 6 .Pages.ByWeight }}
+                                {{ range first 6 (where .Pages.ByWeight ".Params.series" "==" nil) }}
                                 {{ .Render "summary" }}
                                 {{ end }}
                             </div>
@@ -42,6 +42,31 @@
                             {{ end }}
                         </div>
                         {{ end }}
+                        {{ $series := first 6 (where .Pages.ByWeight ".Params.series" "!=" nil) }}
+                        {{ $page := $.Site.GetPage "/series" }}
+                        <div class="category-info" id="series-view">
+                            <h3 class="category-title"> Top Series
+                                <!-- Fragment Identifier -->
+                                <a class="fragment-identifier js-fragment-identifier fragment-identifier-scroll" href="#series-view">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                                <!-- End of Fragment Identifier -->
+                            </h3>
+                            <!-- Checks for existence of _index.md for a section; if available, pulls from "title" in front matter -->
+                            <h4 class="category-description">{{ $page.Description }}</h4>
+                        </div>
+                        <div class="grid-view js-grid-view">
+                            <div class="row">
+                                {{ range $series }}
+                                {{ .Render "summary" }}
+                                {{ end }}
+                            </div>
+                            {{ if gt (len $page.Pages.ByWeight) 6 }}
+                            <div class="row">
+                                <a href="{{ $page.Permalink }}" class="button stroke rounded small blue-light">View all</a>
+                            </div>
+                            {{ end }}
+                        </div>
                     </div>
                 </div>
             </div>

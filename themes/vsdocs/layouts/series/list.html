@@ -1,0 +1,34 @@
+{{ define "title"}} {{ .Site.Title }} - {{ .Title }} {{end}}
+{{ define "header"}} {{ partial "tutorial-header.html" . }} {{end}}
+{{ define "main" }}
+<div id="content">
+    <div class="container">
+        <div class="layout js-layout">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="main-content">
+                        <div class="row">
+                            {{ range $key, $taxonomy := .Site.Taxonomies.series }}
+                            {{ $page := $.Site.GetPage (printf "/series/%s" $key) }}
+                            <div class="col-md-4">
+                                <div class="category-list">
+                                    <h3 class="category-list-title">{{ $page.Data.Term }}</h3>
+                                    <ul class="category-list-content">
+                                        {{ range $taxonomy.Pages.ByWeight }}
+                                        <li class="category-list-content-item">
+                                            {{.NextInSection }}
+                                            <a href="{{ .Permalink }}" class="category-list-content-item-text">{{ .LinkTitle }}</a>
+                                        </li>
+                                        {{ end }}
+                                    </ul>
+                                </div>
+                            </div>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

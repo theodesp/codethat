@@ -1,4 +1,4 @@
-{{ define "title"}} {{ .Site.Title }} - {{ .Title}} {{end}}
+{{ define "title"}} {{ .Site.Title }} - {{ .Title }} {{end}}
 {{ define "header"}} {{ partial "tutorial-header.html" . }} {{end}}
 {{ define "main" }}
 <div id="content">
@@ -54,6 +54,7 @@
                     {{ end }}
                 {{ end }}
               <div class="article-content">
+                {{ partial "series-steps.html" . }}
                 {{ .Content }}
                 {{ $tags := $.Site.GetPage "tags" }}
                 {{ with .Params.tags }}

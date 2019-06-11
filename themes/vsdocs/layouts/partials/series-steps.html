@@ -1,0 +1,22 @@
+{{ if .Page.Params.series }}
+{{ $pages := .Parent.Pages }}
+{{ $url := .URL }}
+{{ $scratch := newScratch }}
+<div class="series-title">Part of the "{{ index .Page.Params.series 0 }}" series</div>
+<div class="series">
+    <div class="series-track"></div>
+    {{ range $index, $page := $pages.ByWeight }}
+    {{ $active := eq $url $page.URL }}
+    {{ if $active }}
+        {{ $scratch.Set "active" "true" }}
+        <a href="#" class="series-step is-active" title="{{ $page.Title }}"></a>
+    {{ else }}
+        {{ if eq ($scratch.Get "active") "true" }}
+            <a href="{{ $page.Permalink }}" class="series-step" title="{{ $page.Title }}"></a>
+        {{ else }}
+            <a href="{{ $page.Permalink }}" class="series-step is-complete" title="{{ $page.Title }}"></a>
+        {{ end }}
+    {{ end }}
+    {{ end }}
+</div>
+{{ end }}
