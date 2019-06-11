@@ -41,9 +41,7 @@
                 </li>
                 <li>
                   {{ $levels := $.Site.GetPage "levels" }}
-                    <span class="article-meta-item">
-                        <a href="{{ $levels.Permalink }}">Skill level {{ .Params.levels }}</a>
-                    </span>
+                    <i class="fa fa-star"></i> <a href="{{ $levels.Permalink }}">Skill level {{ .Params.levels }}</a>
                 </li>
               </ul>
               {{ partial "toc.html" . }}

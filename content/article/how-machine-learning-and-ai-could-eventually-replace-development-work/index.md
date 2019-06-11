@@ -3,7 +3,7 @@ author: "Theo"
 date: 2017-09-11T14:15:59-06:00
 title: "How Machine Learning and AI could eventually replace development work"
 summary: "The future of development in terms of the Machine learning advances in not so bad"
-weight: 40
+weight: 30
 tags: [
     "AI",
     "Machine learning",

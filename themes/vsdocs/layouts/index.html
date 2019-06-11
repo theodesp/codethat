@@ -34,7 +34,7 @@
                                 {{ end }}
                             </div>
                             {{ with $.Site.GetPage "section" .Key }}
-                                {{ if gt (len .Pages.ByWeight) 6 }}
+                                {{ if gt (len .Pages) 6 }}
                                     <div class="row">
                                         <a href="{{ .Permalink }}" class="button stroke rounded small blue-light">View all</a>
                                     </div>
@@ -42,7 +42,7 @@
                             {{ end }}
                         </div>
                         {{ end }}
-                        {{ $series := first 6 (where .Pages.ByWeight ".Params.series" "!=" nil) }}
+                        {{ $series := first 6 (where .Pages.ByWeight ".Params.series" "!=" nil).Reverse }}
                         {{ $page := $.Site.GetPage "/series" }}
                         <div class="category-info" id="series-view">
                             <h3 class="category-title"> Top Series
@@ -61,7 +61,7 @@
                                 {{ .Render "summary" }}
                                 {{ end }}
                             </div>
-                            {{ if gt (len $page.Pages.ByWeight) 6 }}
+                            {{ if gt (len $page.Pages) 6 }}
                             <div class="row">
                                 <a href="{{ $page.Permalink }}" class="button stroke rounded small blue-light">View all</a>
                             </div>

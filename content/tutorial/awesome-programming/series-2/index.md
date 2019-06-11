@@ -3,7 +3,7 @@ author: "Theo"
 date: 2017-07-30T14:15:59-06:00
 title: "Series-2"
 summary: "Series-2"
-weight: -90
+weight: -20
 tags: [
     "javascript",
     "development",
@@ -15,5 +15,5 @@ categories: [
 ]
 levels: "basic"
 series: ["Awesome Programming"]
-series_weight: -90
+series_weight: -20
 ---
