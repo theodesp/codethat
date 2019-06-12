@@ -1,6 +1,6 @@
 ---
 author: "Theo"
-date: 2018-02-1T14:15:59-06:00
+date: 2018-02-01T14:15:59-06:00
 title: "Resource Pool Design Pattern"
 summary: "Learn what a Resource Pool is by coding one."
 weight: -10
