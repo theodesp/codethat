@@ -2,7 +2,7 @@
 author: "Theo"
 date: 2017-06-30T14:15:59-06:00
 title: "‘this’-less Javascript Development"
-summary: "or programming without using ‘this’"
+summary: "or programming without using ‘this’."
 weight: 30
 tags: [
     "javascript",

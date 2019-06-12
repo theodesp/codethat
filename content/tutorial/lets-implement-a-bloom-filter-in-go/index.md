@@ -2,7 +2,7 @@
 author: "Theo"
 date: 2017-12-12T14:15:59-06:00
 title: "Let's Implement a Bloom Filter in Go"
-summary: "Learn more about Bloom filters by implementing one"
+summary: "Learn more about Bloom filters by implementing one."
 weight: 30
 tags: [
     "go",

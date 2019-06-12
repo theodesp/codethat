@@ -51,7 +51,7 @@
               {{ range .Resources.Match "*/featured*"  }}
                     {{ $image := .Resize "1280x853" }}
                     {{ with $image }}
-                    <img src="{{ .Permalink }}" class="article-featured-image" alt="article featured image"> </a>
+                    <img data-zoomable="true" src="{{ .Permalink }}" class="article-featured-image" alt="article featured image"> </a>
                     {{ end }}
                 {{ end }}
               {{ partial "toc.html" . }}

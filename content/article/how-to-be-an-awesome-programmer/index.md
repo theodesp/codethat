@@ -2,7 +2,7 @@
 author: "Theo"
 date: 2017-08-08T14:15:59-06:00
 title: "How to be an awesome programmer"
-summary: "Do you want to be an awesome programmer? Read this"
+summary: "Do you want to be an awesome programmer? Read this."
 weight: 40
 tags: [
     "career",

@@ -25,7 +25,7 @@
 {{/* only use images smaller than or equal to the src (original) image size, as Hugo will upscale small images */}}
 {{/* set the sizes attribute to (min-width: 35em) 1200px, 100vw unless overridden in shortcode */}}
 
-<img
+<img data-zoomable="true"
         {{ with .Get "sizes" }}sizes='{{.}}'{{ else }}sizes="(min-width: 35em) 720px, 100vw"{{ end }}
 srcset='
 {{ if ge $src.Width "500" }}
