@@ -58,7 +58,7 @@ Out of those ways to test we are interested in TDD. The primary disadvantages of
 * How to know if a specification is met?
 * Does the code deliver business value?
 
-![what the customer wanter](images/customer-wanted.jpg)
+{{< img src="images/customer-wanted.jpg" alt="What the customer wanted">}}
 
 Overcoming those disadvantages is why **BDD** was [born](https://dannorth.net/introducing-bdd/). 
 But what exactly is BDD? Bear with me and we will find out by looking into some facts.

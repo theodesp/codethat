@@ -25,7 +25,7 @@ It's easy. You only have to pay attention as this is important.
 
 {{< header title="Escape from the Cave" >}}
 
-![getOut](images/escape-cave.jpg)
+{{< img src="images/escape-cave.jpg" alt="Escape from the cave">}}
 
 Hey if you are still programming like you are living in the cave, hiding stuff for yourself or idealising your abstractions and minimising other people effort, bragging your self out like you are the god-programmer with 100x productivity or whatever you want to call it, please stop it before you proceed further. 
 
