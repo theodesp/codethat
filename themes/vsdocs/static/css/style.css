@@ -7472,109 +7472,26 @@ Copyright (c) 2015 Daniel Eden
   z-index: 9999;
 }
 .preloader-animation {
-  width: 30px;
-  height: 30px;
-  border: 1px solid #2288cc;
-  border-radius: 50%;
   position: fixed;
   left: 50%;
   top: 50%;
-  margin-top: -15px;
-  margin-left: -15px;
-  background-color: #c5e2f5;
-  box-shadow: 0 0 0 33px white, 0 0 0 34px #99ccee;
+  margin-top: -65px;
+  margin-left: -65px;
   backface-visibility: hidden;
 }
-.preloader-animation:after,
-.preloader-animation:before {
-  content: '';
-  display: block;
-  width: 8px;
-  height: 8px;
+.preloader-button {
+  height: 40px;
+  width: 40px;
+  background: rgba(0, 0, 0, 0.8);
   border-radius: 50%;
-  background-color: #2288cc;
-  border: 1px solid #2288cc;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-  position: absolute;
-  background-color: #c5e2f5;
+  border: 1px solid #1D9AF2;
+  opacity: 1;
+  animation: spinner4 800ms linear infinite;
 }
-.preloader-animation:after {
-  top: -38px;
-  -webkit-transform-origin: 0 52px;
-  -moz-transform-origin: 0 52px;
-  -ms-transform-origin: 0 52px;
-  -o-transform-origin: 0 52px;
-  transform-origin: 0 52px;
-  -webkit-animation: preloader-anim 1.5s linear infinite;
-  -moz-animation: preloader-anim 1.5s linear infinite;
-  -ms-animation: preloader-anim 1.5s linear infinite;
-  -o-animation: preloader-anim 1.5s linear infinite;
-  animation: preloader-anim 1.5s linear infinite;
-}
-.preloader-animation:before {
-  bottom: -38px;
-  -webkit-transform-origin: 0 -44px;
-  -moz-transform-origin: 0 -44px;
-  -ms-transform-origin: 0 -44px;
-  -o-transform-origin: 0 -44px;
-  transform-origin: 0 -44px;
-  -webkit-animation: preloader-anim 1.3s linear infinite;
-  -moz-animation: preloader-anim 1.3s linear infinite;
-  -ms-animation: preloader-anim 1.3s linear infinite;
-  -o-animation: preloader-anim 1.3s linear infinite;
-  animation: preloader-anim 1.3s linear infinite;
-}
-@-moz-keyframes preloader-anim {
-  0% {
-    -webkit-transform: rotate(-180deg) translateX(-50%);
-    -moz-transform: rotate(-180deg) translateX(-50%);
-    -ms-transform: rotate(-180deg) translateX(-50%);
-    -o-transform: rotate(-180deg) translateX(-50%);
-    transform: rotate(-180deg) translateX(-50%);
-  }
-  100% {
-    -webkit-transform: rotate(180deg) translateX(-50%);
-    -moz-transform: rotate(180deg) translateX(-50%);
-    -ms-transform: rotate(180deg) translateX(-50%);
-    -o-transform: rotate(180deg) translateX(-50%);
-    transform: rotate(180deg) translateX(-50%);
-  }
-}
-@-webkit-keyframes preloader-anim {
-  0% {
-    -webkit-transform: rotate(-180deg) translateX(-50%);
-    -moz-transform: rotate(-180deg) translateX(-50%);
-    -ms-transform: rotate(-180deg) translateX(-50%);
-    -o-transform: rotate(-180deg) translateX(-50%);
-    transform: rotate(-180deg) translateX(-50%);
-  }
-  100% {
-    -webkit-transform: rotate(180deg) translateX(-50%);
-    -moz-transform: rotate(180deg) translateX(-50%);
-    -ms-transform: rotate(180deg) translateX(-50%);
-    -o-transform: rotate(180deg) translateX(-50%);
-    transform: rotate(180deg) translateX(-50%);
-  }
-}
-@keyframes preloader-anim {
-  0% {
-    -webkit-transform: rotate(-180deg) translateX(-50%);
-    -moz-transform: rotate(-180deg) translateX(-50%);
-    -ms-transform: rotate(-180deg) translateX(-50%);
-    -o-transform: rotate(-180deg) translateX(-50%);
-    transform: rotate(-180deg) translateX(-50%);
-  }
-  100% {
-    -webkit-transform: rotate(180deg) translateX(-50%);
-    -moz-transform: rotate(180deg) translateX(-50%);
-    -ms-transform: rotate(180deg) translateX(-50%);
-    -o-transform: rotate(180deg) translateX(-50%);
-    transform: rotate(180deg) translateX(-50%);
+@keyframes spinner4 {
+  to {
+    transform: scale(1.5);
+    opacity: 0;
   }
 }
 .logo-image {
@@ -15594,6 +15511,12 @@ input.changelog-input {
 }
 .article-meta-category:before {
   content: '\e653';
+}
+.article-meta-reading:before {
+  content: '\e66b';
+}
+.article-meta-skill:before {
+  content: '\e611';
 }
 .article-meta-views:before {
   content: '\e63e';

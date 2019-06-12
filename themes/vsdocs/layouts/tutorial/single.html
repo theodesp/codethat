@@ -37,11 +37,15 @@
                   {{ end }}
                 </li>
                 <li>
-                  <i class="fa fa-clock-o"></i> Reading time {{ .ReadingTime }} min
+                     <span class="article-meta-reading article-meta-item">
+                        Reading time {{ .ReadingTime }} min
+                     </span>
                 </li>
                 <li>
                   {{ $levels := $.Site.GetPage "levels" }}
-                    <i class="fa fa-star"></i> <a href="{{ $levels.Permalink }}">Skill level {{ .Params.levels }}</a>
+                    <span class="article-meta-skill article-meta-item">
+                        <a href="{{ $levels.Permalink }}">Skill level {{ .Params.levels }}</a>
+                     </span>
                 </li>
               </ul>
               {{ range .Resources.Match "*/featured*"  }}

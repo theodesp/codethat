@@ -41,7 +41,9 @@
                   {{ end }}
                 </li>
                 <li>
-                  <i class="fa fa-clock-o"></i> Reading time {{ .ReadingTime }} min
+                   <span class="article-meta-reading article-meta-item">
+                 Reading time {{ .ReadingTime }} min
+                     </span>
                 </li>
               </ul>
               {{ range .Resources.Match "*/featured*"  }}
