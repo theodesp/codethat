@@ -25,21 +25,13 @@ googleAnalytics = "UA-141826516-1"
     weight = -100
     url = "/categories/go/"
 [[menu.main]]
-    name = "Python"
+    name = "Javascript"
     weight = -90
-    url = "/categories/python/"
+    url = "/categories/javascript/"
 [[menu.main]]
-    name = "Typescript"
+    name = "Data Structures"
     weight = -80
-    url = "/categories/typescript/"
-[[menu.main]]
-    name = "Clojure"
-    weight = -70
-    url = "/categories/clojure/"
-[[menu.main]]
-    name = "Scala"
-    weight = -60
-    url = "/categories/scala/"
+    url = "/categories/data-structures/"
 [[menu.main]]
     name = "Books"
     weight = -50
