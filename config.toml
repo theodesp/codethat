@@ -1,4 +1,4 @@
-baseURL = "https://codethat-today.onrender.com/"
+baseURL = "https://www.codethat.today/"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 defaultContenLanguageInSubdir = "true"
