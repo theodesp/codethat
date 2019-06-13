@@ -1,1 +1,1 @@
-<div class="gif-player"><img src="{{ .Get "src" }}" class="js-gif-player" alt="gif animation"></div>
+<div class="gif-player"><img src="{{ .Get "src" }}" class="js-gif-player" {{ with .Get "alt" }}alt='{{.}}'{{ end }}></div>

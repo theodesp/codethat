@@ -8,7 +8,6 @@ type: about
 CodeThat.today is a site for all developers wanting to learn new technologies and best practices. We write practical guides, in-depth tutorials and step-by-step articles. We also give expert opinions and recommendations about the best uses of a particular technology so that the reader can make informed decisions.
 
 I hope you'll enjoy the site as much as we do!
-Let's keep in touch [via Twitter](http://twitter.com/nerdokto).
 
 ## The author
 
