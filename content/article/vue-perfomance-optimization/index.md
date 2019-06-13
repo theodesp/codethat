@@ -1,6 +1,6 @@
 ---
 author: "Theo"
-date: 2019-02-02T14:15:59-06:00
+date: 2019-02-02
 title: "Vue Performance Optimizations"
 summary: "Practical Tips and tricks on how to optimize Vue applications"
 weight: 40
