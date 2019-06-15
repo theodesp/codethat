@@ -1,6 +1,6 @@
 ---
 author: "Theo"
-date: 2018-05-18T14:15:59-06:00
+date: 2018-05-18
 title: "A Step-by-Step Guide to Go Internationalization (i18n) & Localization (l10n)"
 summary: "The Ultimate Step-by-Step Guide to Go Internationalization (i18n) and Localization (l10n). Learn how to localize Go applications using the latest Go v1.10. We will discuss character encodings, text transformations, and locale-specific text handling."
 weight: -20

@@ -1,6 +1,6 @@
 ---
 author: "Theo"
-date: 2017-7-17T14:15:59-06:00
+date: 2017-7-17
 title: "Behind Continuations Passing Style. Practical Examples in Go"
 summary: "In computer science and computer programming, a continuation is an abstract representation of the control state of a computer program. A continuation reifies the program control state."
 weight: -20
