@@ -26,6 +26,7 @@
 {{/* set the sizes attribute to (min-width: 35em) 1200px, 100vw unless overridden in shortcode */}}
 
 <img data-zoomable="true"
+        class="image-center"
         {{ with .Get "sizes" }}sizes='{{.}}'{{ else }}sizes="(min-width: 35em) 720px, 100vw"{{ end }}
 srcset='
 {{ if ge $src.Width "500" }}
@@ -41,8 +42,10 @@ srcset='
 {{ with $large.RelPermalink }}, {{.}} 1500w {{ end }}
 {{ end }}'
 {{ if .Get $medium }}
-src="{{ $medium.RelPermalink }}"
+src="{{ $medium.RelPermalink }}" 
+data-src="{{ $medium.RelPermalink }}"
 {{ else }}
 src="{{ $src.RelPermalink }}"
+data-src="{{ $src.RelPermalink }}" 
 {{ end }}
 {{ with .Get "alt" }}alt='{{.}}'{{ end }}>

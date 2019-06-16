@@ -1,3 +1,3 @@
 $(document).ready(function() {
-  mediumZoom('[data-zoomable]')
+  mediumZoom('[data-zoomable]');
 });

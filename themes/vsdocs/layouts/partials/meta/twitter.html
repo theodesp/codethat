@@ -3,7 +3,7 @@
 <meta name="twitter:image" content="{{ index . 0 | absURL }}"/>
 {{ else -}}
 {{- $images := $.Resources.ByType "image" -}}
-{{- $featured := $images.GetMatch "*featured*" -}}
+{{- $featured := $images.GetMatch "*images/featured*" -}}
 {{- $featured := cond (ne $featured nil) $featured ($images.GetMatch "{*cover*,*thumbnail*}") -}}
 {{- with $featured -}}
 <meta name="twitter:card" content="summary_large_image"/>
