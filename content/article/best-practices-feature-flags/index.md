@@ -58,7 +58,7 @@ class ImportantDecisions
 }
 {{< /code-block >}}
 
-The control over handling of the flags has been transferred from the ImportantDecisions class to the featureFlagService.This way, you can also make your code easier to test as you pass a different configuration to the caller and verify the results.
+The control over handling of the flags has been transferred from the `ImportantDecisions` class to the `featureFlagService`.This way, you can also make your code easier to test as you pass a different configuration to the caller and verify the results.
 
 **2. Add metadata in your feature bundles.**
 For each version of the software you deploy, there could be one or more features that need to be flagged on or off. Some features could be added and some others could be removed. In order to keep track of what is where, it’s important to have additional metadata related to each feature block. For example, you may need to add tags or labels to mark specific features with extra information. This is useful when you are creating or updating flags via a management dashboard where you can have overviews of different groups. When you roll out flags, you can see which tags are applied. And in case you have multiple tags, you can see for different targets whether a feature is enabled or not. This will also give fine-grained control over feature management.
