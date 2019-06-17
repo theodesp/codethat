@@ -57,19 +57,47 @@
                             <div class="category-info " id="grid-view">
                                 <h3 class="category-title"> And the rest </h3>
                             </div>
-                            <div class="row">
-                                {{ range after 2 $pages.ByDate }}
-                                <div class="col-md-4">
-                                    <div class="grid-view-elem js-grid-view-elem">
-                                        <h3 class="grid-view-elem-title">
-                                            <a href="{{ .Permalink }}">{{ .Title }}</a>
-                                            <span class="grid-view-title-descr"></span>
-                                        </h3>
-                                        <p class="grid-view-elem-description"> {{ .Summary | truncate 100 }} </p>
+                            {{ range after 2 $pages.ByDate }}
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="blog-grid">
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-5">
+                                                <div class="blog-grid-image">
+                                                    <a href="{{ .Permalink }}">
+                                                        <span class="blog-grid-image-over"></span>
+                                                        {{ range .Resources.Match "*/featured*" }}
+                                                        {{ $image := .Resize "1280x853" }}
+                                                            {{ with $image }}
+                                                            <img src="{{ .Permalink }}" class="" alt="article image"> 
+                                                            {{ else }}
+                                                            <img src="http://placehold.it/1280x853" class="" alt="article image">
+                                                            {{ end }}
+                                                        {{ end }}
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-8 col-sm-7">
+                                                <h3 class="blog-grid-title">
+                                                    <a href="{{ .Permalink }}"> {{ .Title }} </a>
+                                                </h3>
+                                                <p class="blog-grid-excerpt"> {{ .Summary | truncate 100 }} </p>
+                                                <div class="blog-grid-meta">
+                                                    <span class="blog-grid-date">{{ .Date.Format "Oct 03 2006" }}</span>
+                                                    <span class="blog-grid-author">by
+                                                    {{ if .Params.author }}
+                                                        {{ with $author := index .Site.Data.assets.authors .Params.author }}
+                                                        <a href="{{ index $author "homepage" }}">{{ index $author "name" }} </a>
+                                                        {{ else }}
+                                                        {{ .Params.author }}
+                                                        {{ end }}
+                                                    {{ end }}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 {{ end }}
-                            </div>
                             {{ end }}
                         </div>
                     </div>

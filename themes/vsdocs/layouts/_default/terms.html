@@ -1,24 +1,40 @@
 {{ define "title"}} {{ .Site.Title }} - {{ .Title}} {{end}}
-{{ define "header"}} {{ partial "taxonomy-header.html" . }} {{end}}
+{{ define "header"}} {{ partial "term-header.html" . }} {{end}}
 {{ define "main" }}
 
-{{ $termName := .Data.Singular }}
-{{ $terms := .Data.Terms.ByCount }}
-{{ $length := len $terms }}
-{{ $type := .Type }}
-<main>
-    <article>
-        <header>
-            <h1>{{.Title}}</h1>
-        </header>
-        {{.Content}}
-    </article>
-    <ul>
-        {{ range .Pages }}
-        <li>
-            <a href="{{.Permalink}}">{{ .Date.Format "Oct 03 2006" }} | {{.Title}}</a>
-        </li>
-        {{ end }}
-    </ul>
-</main>
+<div id="content">
+        <div class="container">
+            <div class="layout js-layout">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="category-info helper pt0" id="list-view">
+                            <h3 class="category-title"> {{.Title}}
+                                <!-- Fragment Identifier -->
+                                <a class="fragment-identifier js-fragment-identifier fragment-identifier-scroll" href="#list-view">
+                                    <i class="fa fa-link"></i>
+                                </a>
+                                <!-- End of Fragment Identifier -->
+                            </h3>
+                            <!-- <h4 class="category-description">A list style layout is for the seated because users' actions tend to be very singular in purpose. They've come to your site to do one thing: browse or read. Present them with content in a standard way and let them just get lost in it.</h4> -->
+                        </div>
+                        <div class="list-view ">
+                            {{ range .Pages }}
+                            <div class="list-item">
+                                <div class="list-item-header">
+                                    <h3 class="list-item-title">
+                                        <a href="{{.Permalink}}">{{ .Date.Format "Oct 03 2006" }} | {{.Title}}</a>
+                                    </h3>
+                                    <!-- <span class="list-item-meta">
+                                        <a href="#">how to</a>
+                                    </span> -->
+                                </div>
+                                <!-- <div class="list-item-content"> WordPress is a great product. It&#39;s easy-to-use, quite powerful, and flexible. Creating a website, and maintaining a website, is a science and art that has quickly evolved. </div> -->
+                            </div>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
 {{ end }}

@@ -1,0 +1,17 @@
+<div class="header header-over large">
+    {{ partial "nav-header.html" . }}
+</div>
+<div class="header-back header-back-simple header-back-small">
+    <div class="header-back-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-info page-info-simple">
+                        <h1 class="page-title">All {{ .Title | title }}</h1>
+                        <h2 class="page-description"><blockquote>{{ .Params.quote }}</blockquote></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
