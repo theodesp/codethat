@@ -4,7 +4,6 @@ date: 2019-06-16
 title: "Best Practices for using Feature Flags"
 summary: "What are feature flags and how they can help delivering functionality in practice."
 weight: -40
-draft: true
 tags: [
     "best-practices"
 ]
