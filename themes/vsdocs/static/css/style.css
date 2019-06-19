@@ -7637,6 +7637,10 @@ Copyright (c) 2015 Daniel Eden
 .header-fixed.header-fixed-light {
   background-color: #263952;
 }
+.header-fixed.headroom--top {
+  background-color: transparent;
+  box-shadow: none !important;
+}
 .header-back {
   background-size: cover;
   background-repeat: no-repeat;
@@ -15457,6 +15461,9 @@ input.changelog-input {
 .blog-grid-author {
   display: block;
 }
+.article-content {
+  padding-top: 60px;
+}
 .article-title {
   margin: 0 0 20px 0;
   line-height: 1.2;
@@ -18393,5 +18400,109 @@ input.changelog-input {
 
 .series > .series-step.is-complete:after {
   background: #2183dd;
+}
+
+.headroom {
+  transition: transform .25s ease-in-out;
+  will-change: transform
+}
+
+.headroom--pinned {
+  transform: translateY(0);
+}
+
+.headroom--unpinned {
+  transform: translateY(-100%)
+}
+
+@-webkit-keyframes slideDown {
+  0% {
+    -webkit-transform: translateY(-100%);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes slideDown {
+  0% {
+    -moz-transform: translateY(-100%);
+  }
+
+  100% {
+    -moz-transform: translateY(0);
+  }
+}
+
+@-o-keyframes slideDown {
+  0% {
+    -o-transform: translateY(-100%);
+  }
+
+  100% {
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animated.slideDown {
+  -webkit-animation-name: slideDown;
+  -moz-animation-name: slideDown;
+  -o-animation-name: slideDown;
+  animation-name: slideDown;
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(-100%);
+  }
+}
+@-moz-keyframes slideUp {
+  0% {
+    -moz-transform: translateY(0);
+  }
+
+  100% {
+    -moz-transform: translateY(-100%);
+  }
+}
+@-o-keyframes slideUp {
+  0% {
+    -o-transform: translateY(0);
+  }
+
+  100% {
+    -o-transform: translateY(-100%);
+  }
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.animated.slideUp {
+  -webkit-animation-name: slideUp;
+  -moz-animation-name: slideUp;
+  -o-animation-name: slideUp;
+  animation-name: slideUp;
 }
 

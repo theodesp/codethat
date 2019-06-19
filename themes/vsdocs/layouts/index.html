@@ -11,10 +11,10 @@
                 </div>
                 <div class="grid-view js-grid-view">
                     <div class="row">
+                        <div class="col-md-12">
                         {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
                         {{ $groups := sort ($pages.GroupBy "Section") "Key" "desc" }}
                         {{ range $groups }}
-                        <div class="col-md-12">
                             <div class="category-info " id="{{ .Key | urlize }}-view">
                                 <h3 class="category-title"> Top {{ .Key | pluralize }}
                                     <!-- Fragment Identifier -->
@@ -66,8 +66,8 @@
                                 <div class="row">
                                     <a href="{{ $page.Permalink }}" class="button stroke rounded small blue-light">View all</a>
                                 </div>
-                                {{ end }}
                             </div>
+                            {{ end }}
                         </div>
                     </div>
                 </div>
