@@ -1,7 +1,6 @@
 ---
 author: "Theo"
-date: 2019-06-20
-draft: true
+date: 2019-06-19
 title: "Creating Reusable Web Components with Stencil.js"
 summary: "Learn more about the Stencil.js framework and how to create reusable components in a small Todo list app."
 weight: -40
