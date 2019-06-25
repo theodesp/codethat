@@ -2,7 +2,7 @@
 author: "Theo"
 date: 2019-06-25
 title: "Best ways to use React Hooks for state management"
-summary: "Lean the best ways can we use React Hooks for state management?"
+summary: "Learn the best ways can we use React Hooks for state management"
 weight: -40
 tags: [
     "typescript",
