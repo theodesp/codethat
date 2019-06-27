@@ -1,4 +1,4 @@
-baseURL = "https://codethat-today.netlify.com/"
+baseURL = "https://codethat.today"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 defaultContenLanguageInSubdir = "true"
