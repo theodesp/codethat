@@ -3,7 +3,7 @@ author: "Theo"
 date: 2019-07-06
 title: "Top CSS Interview Questions with detailed answers.👑✨😊🏈⚽🏀🏐⚾ Part III"
 summary: "Practice your CSS knowledge with some basic CSS interview questions"
-weight: 20
+weight: 10
 tags: [
     "css",
     "interview"
