@@ -1,0 +1,14 @@
+{{ if .Site.Params.comments.enabled }}
+<div class="article-meta">
+  <script src="https://utteranc.es/client.js"
+    repo="{{ .Site.Params.comments.repo }}"
+    issue-term="title"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+  </script>
+  <div class="utterances">
+    <div class="utterances-frame"></div>
+  </div>
+</div>
+{{ end }}

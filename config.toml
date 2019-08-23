@@ -70,4 +70,4 @@ timeout=30000
   orgName = "CodeThat.today"
   mainSections = ["article", "tutorial"]
   copyright = "Code snippets licensed under MIT, unless otherwise noted © 2019"
-
+  comments = { enabled = true, repo                = "theodesp/codethat" }
