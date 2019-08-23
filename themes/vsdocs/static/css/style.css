@@ -18286,7 +18286,7 @@ input.changelog-input {
 /* Autocomplete */
 .autocomplete-suggestions {
   text-align: left;
-  cursor: default;
+  cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 30px;
   background: transparent;
