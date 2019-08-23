@@ -16,7 +16,7 @@ series: ["Top HTML Interview Questions"]
 series_weight: -20
 ---
 
-Hello. As we have reviewed the most [useful CSS interview Questions](http://codethat.today/tutorial/top-css-interview-questions/part-one/), we can continue our little adventure and practice with HTML for this series.
+Hello. As we have reviewed the most [useful CSS interview Questions](https://codethat.today/tutorial/top-css-interview-questions/part-one/), we can continue our little adventure and practice with HTML for this series.
 
 You may be thinking, *hey HTML is easy right?*. Wrong! HTML is a rabbits hole and has a lot more tricky parts to understand than CSS. There are lots of properties, rules and APIs and more. It's not only about Markup but the rules that govern them. Hopefully, with this series you can prepare in advance and demystify some of the hard parts of HTML.
 
