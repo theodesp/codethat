@@ -62,12 +62,13 @@
                                     {{ .Render "summary" }}
                                     {{ end }}
                                 </div>
-                                {{ if gt (len $page.Pages) 6 }}
+                                {{ if gt (len $page.Pages) 1 }}
                                 <div class="row">
                                     <a href="{{ $page.Permalink }}" class="button stroke rounded small blue-light">View all</a>
                                 </div>
+                                {{ end }}
                             </div>
-                            {{ end }}
+                           
                         </div>
                     </div>
                 </div>

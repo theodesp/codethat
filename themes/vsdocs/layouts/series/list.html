@@ -16,7 +16,6 @@
                                     <ul class="category-list-content">
                                         {{ range $taxonomy.Pages.ByWeight }}
                                         <li class="category-list-content-item">
-                                            {{.NextInSection }}
                                             <a href="{{ .Permalink }}" class="category-list-content-item-text">{{ .LinkTitle }}</a>
                                         </li>
                                         {{ end }}

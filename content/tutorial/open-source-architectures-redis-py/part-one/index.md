@@ -1,9 +1,9 @@
 ---
 author: "Theo"
-date: 2019-08-28
+date: 2019-08-27
 title: "Exploring Open Source Architectures - Redis.py Part I"
 summary: "Explore popular open source projects with detailed analysis of their architecture. We start with Redis.py"
-weight: -30
+weight: 10
 tags: [
     "redis",
     "architecture"
