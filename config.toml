@@ -49,6 +49,12 @@ timeout=30000
     weight = -100
     url = "/categories/development/"
 
+[[menu.main]]
+    parent = "more"
+    name = "Architecture"
+    weight = -100
+    url = "/categories/architecture/"
+
 [[menu.footer]]
     name = "About"
     weight = -100
