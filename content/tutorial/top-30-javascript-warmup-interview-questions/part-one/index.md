@@ -36,7 +36,7 @@ Then we use [Array Join](https://www.w3schools.com/jsref/jsref_join.asp) to comb
 
 Here is the gist of the code:
 
-{% runkit %}
+{{< code-block javascript >}}
 function reverseString(s) {
   // Create the result list
   const result = [];
@@ -54,7 +54,7 @@ console.log(reverseString(""))
 console.log(reverseString("abc"))
 console.log(reverseString("aaabbbcccd"))
 
-{% endrunkit %}
+{{< /code-block >}}
 
 
 * **2. Write a function that filters out numbers from a list**.
@@ -72,14 +72,14 @@ which is not what we need. The solution is to use [isNaN](https://www.w3schools.
 
 However if you noticed (and maybe the interviewer is picky) there are two cases where this thing fails:
 
-```javascript
+{{< code-block javascript >}}
 isNaN('') //false
 isNaN(true) //false
-```
+{{< /code-block >}}
 
 So we want to add two more checks for empty string and boolean:
 
-```javascript
+{{< code-block javascript >}}
 function isBoolean(value) {
   return typeof value === 'boolean';
 }
@@ -88,12 +88,12 @@ function isEmptyString(value) {
   return typeof value === 'string' && value.trim().length === 0;
 }
 
-```
+{{< /code-block >}}
 
 
 Here is the gist of the code:
 
-{% runkit %}
+{{< code-block javascript >}}
 function filterNumbers(arr) {
   // Create the result list
   const result = arr.filter(function(value, i) {
@@ -116,14 +116,14 @@ function isEmptyString(value) {
 }
 
 console.log(filterNumbers([1, "2", "   ", NaN, Number.POSITIVE_INFINITY, 66, "ab1", false]))
-{% endrunkit %}
+{{< /code-block >}}
 
 
 * **3. Write a function that finds an element inside an unsorted list.**
 
 This is a typical linear search algorithm that takes Θ(n) time to complete. We need to traverse the whole list and compare the search item with the current item:
 
-{% runkit %}
+{{< code-block javascript >}}
 function linearSearch(arr, x) {
   let lo = 0;
   let hi = arr.length-1;
@@ -142,7 +142,7 @@ function linearSearch(arr, x) {
 
 let arr = [1,3,5,7,9,11,14,18,22];
 console.info("Item was found at index: " + linearSearch(arr, 22));
-{% endrunkit %}
+{{< /code-block >}}
 
 
 * **4. Write a function that showcases the usage of closures.**
@@ -151,7 +151,7 @@ Please review existing dev.to articles about [what](https://dev.to/spukas/what-d
 
 Here is a simple example:
 
-{% runkit %}
+{{< code-block javascript >}}
 function multiplier(first) {
   let a = first;
   return function(b) {
@@ -163,7 +163,7 @@ let multiplyBy2 = multiplier(2);
 
 console.info(multiplyBy2(4));
 console.info(multiplyBy2(5));
-{% endrunkit %}
+{{< /code-block >}}
 
 You should be able to explain where is the closure there
 
@@ -174,7 +174,7 @@ Please review existing dev.to articles regarding [what](https://dev.to/damcosset
 
 Here is a simple example of a Promise:
 
-{% runkit %}
+{{< code-block javascript >}}
 const resultPromise = function(idea) {
   return new Promise(function(resolve, reject) {
     if (idea.isGood) {
@@ -194,7 +194,7 @@ resultPromise({idea: "Make Gold from Iron", isGood: false})
   }, function(err) {
     console.info("Rejected as: " + err.reason);
   });
-{% endrunkit %}
+{{< /code-block >}}
 
 
 * **6. Write a function that flattens a list of items.**
@@ -205,7 +205,7 @@ In order to flatten we need to recurse as we may have a deep hierarchy of lists.
 
 Here is the gist of the code:
 
-{% runkit %}
+{{< code-block javascript >}}
 function flatten(arr=[]) {
     // Create the result list;
     let result = [];
@@ -221,7 +221,7 @@ function flatten(arr=[]) {
 }
 
 console.info(flatten([[1, 2, [3]], 4]));
-{% endrunkit %}
+{{< /code-block >}}
 
 * **7. Write a function that finds an element inside a sorted list.**
 
