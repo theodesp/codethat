@@ -25,7 +25,7 @@ Let's get started.
 
 * **1. Write a function that accepts a number and checks if it's a prime or not.**
 
-To check if a number `n` is prime we need to go through the list of numbers `i` from 2 up until `n/2` and check if `n` equally divides this number `i`. This is to ensure that we cannot express `n` as a factor of `i`.
+To check if a number `n` is prime we need to go through the list of numbers `i` from 2 up until `sqrt(n)` and check if `n` equally divides this number `i`. This is to ensure that we cannot express `n` as a factor of `i`.
 
 Here is the gist of the code:
 
@@ -35,8 +35,8 @@ function isPrime(n) {
     // Special case for 1
     return false;
   } else {
-    // Go through all numbers from 2 up until n/2
-    for (let i = 2; i <= n / 2; i += 1) {
+    // Go through all numbers from 2 up until sqrt(n)
+    for (let i = 2; i < sqrt(n); i += 1) {
       if (n % i === 0) {
         // We found a number i such as i * x = n so the number is not prime
         return false;
