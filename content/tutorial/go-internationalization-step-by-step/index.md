@@ -17,7 +17,7 @@ levels: "medium"
 ---
 
 
-[**Read the original article**](https://phraseapp.com/blog/posts/internationalization-i18n-go/)
+[**Read the original article**](https://phrase.com/blog/posts/internationalization-i18n-go/)
 
 *Go is a statically compiled language that gained a lot of popularity lately due to the fact that is simple, 
 performant and fits really well with developing cloud applications. It has a strong, yet poorly documented sub-package 
